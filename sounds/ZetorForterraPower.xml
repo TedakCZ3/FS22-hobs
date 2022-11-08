@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<sounds>
+    <motorStart template="DEFAULT_MOTOR_START" file="sounds/zetorProximaPower_start.ogg" linkNode="0>"/>
+    <motorStop template="DEFAULT_MOTOR_STOP" file="sounds/zetorProximaPower_stop.ogg" linkNode="0>"/>
+
+    <motor template="DEFAULT_MOTOR_IDLE" file="sounds/zetorProximaPower_idle_loop.ogg" linkNode="0>"/>
+    <motor file="sounds/zetorProximaPower_run_loop.ogg" linkNode="0>" innerRadius="15.0" outerRadius="70.0" >
+      <volume indoor="0.04" outdoor="0.1" >
+         <modifier type="MOTOR_LOAD" value="0.0" modifiedValue="0.00" />
+         <modifier type="MOTOR_LOAD" value="0.60" modifiedValue="1.00" />
+      </volume>
+      <pitch indoor="1.0" outdoor="1.05" >
+         <modifier type="MOTOR_LOAD" value="0.0" modifiedValue="0.25" />
+         <modifier type="MOTOR_LOAD" value="0.35" modifiedValue="1.00" />
+      </pitch>
+      <lowpassGain indoor="0.3" outdoor="1.0" />
+   </motor>
+	<motor template="DEFAULT_MOTOR_OFFLOAD_RUN" file="sounds/zetorProximaPower_run_loop.ogg" linkNode="0>"/>
+    <motor template="DEFAULT_MOTOR_ONLOAD_RUN" file="sounds/zetorForterra_load_loop.ogg" linkNode="0>"/>
+
+    <gearbox file="sounds/zetorProximaPower_transmission_loop.ogg" linkNode="0>" innerRadius="23.5" outerRadius="80.0" >
+        <volume indoor="0.20" outdoor="0.45" >
+            <modifier type="SPEED" value="8.0" modifiedValue="0.0" />
+            <modifier type="SPEED" value="40.0" modifiedValue="1.0" />
+        </volume>
+        <pitch indoor="0.5" outdoor="0.5" >
+            <modifier type="SPEED" value="0.0" modifiedValue="0.8" />
+            <modifier type="SPEED" value="50.0" modifiedValue="1.0" />
+        </pitch>
+        <lowpassGain indoor="0.45" outdoor="0.65" />
+    </gearbox>
+	<retarder template="DEFAULT_RETARDER" file="$data/sounds/vehicles/retarder/retarder_loop_02.ogg" linkNode="0>"/>
+
+    <airCompressorStart template="BRAKE_COMPRESSOR_START" linkNode="0>"/>
+    <airCompressorStop template="BRAKE_COMPRESSOR_STOP" linkNode="0>"/>
+    <airCompressorRun template="BRAKE_COMPRESSOR_RUN" linkNode="0>"/>
+    <compressedAir template="BRAKE_SMALL" linkNode="0>"/>
+    <airRelease template="BRAKE_REGULATOR_VALVE" linkNode="0>"/>
+</sounds>

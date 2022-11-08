@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="hopsCutter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Hop removal machine</name>
+        <specs>
+            <neededPower>62</neededPower>
+            <workingWidth>0.4</workingWidth>
+            <fillTypes>chmel</fillTypes>
+        </specs>
+        <image>store/store_strhavac.png</image>
+        <price>35400</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>Lizard</brand>
+        <category>forageHarvesterCutters</category>
+        <shopTranslationOffset>0 0 -0.5</shopTranslationOffset>
+        <vertexBufferMemoryUsage>487584</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>55068</indexBufferMemoryUsage>
+        <textureMemoryUsage>5680088</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_hopsstrhavac</typeDesc>
+        <filename>vehicles/strhavac.i3d</filename>
+        <size width="1.5" length="7.0"/>
+        <components>
+            <component centerOfMass="-0.15 0.1 0" solverIterationCount="10" mass="300"/>
+        </components>
+        <schemaOverlay name="IMPLEMENT" attacherJointPosition="0 0"/>
+        <speedLimit value="12"/>
+    </base>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJointstr" jointType="strhtrailer" lowerRotationOffset="0" lowerRotLimitScale="0 0 0" upperRotationOffset="3">
+                <distanceToGround lower="0.50" upper="0.65"/>
+            </inputAttacherJoint>
+        </inputAttacherJoints>
+        <support animationName="moveSupport"/>
+    </attachable>
+
+    <groundReferenceNodes>
+        <groundReferenceNode node="groundReferenceNode" threshold="3"/>
+    </groundReferenceNodes>
+
+    <workAreas>
+        <workArea disableBackwards="true" functionName="processCutterArea" type="cutter">
+            <area heightNode="workAreaHeight" startNode="workAreaStart" widthNode="workAreaWidth"/>
+            <folding maxLimit="0.1" minLimit="0"/>
+            <groundReferenceNode index="1"/>
+        </workArea>
+    </workAreas>
+
+    <animations>
+        <animation name="folding">
+            <part endRot="0 0 0" endTime="1.8" node="Cutter" startRot="0 -3 0" startTime="0"/>
+            <part endRot="0 0 0" endTime="1.8" node="hydraulik" startRot="0 0 21.428" startTime="0"/>
+            <part endRot="0 0 0" endTime="1.8" node="hydraulik1" startRot="0 0 -27.529" startTime="0"/>
+            <part endRot="0.165 1.376 1.649" endTime="1.8" node="hydraulik2" startRot="0.165 -0.354 1.649" startTime="0"/>
+        </animation>
+        <animation name="moveSupport">
+            <part endScale="1 1 1" endTime="0.1" node="Holder" startScale="0.01 0.01 0" startTime="0"/>
+            <part endScale="1 1 0.01" endTime="0.1" node="Holder1" startScale="1 1 1" startTime="0"/>
+            <part endScale="1 1 0.01" endTime="0.1" node="Holder2" startScale="1 1 1" startTime="0"/>
+        </animation>
+    </animations>
+
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts startMoveDirection="1" turnOnFoldMinLimit="0" turnOnFoldMaxLimit="0.1" foldMiddleAnimTime="1">
+                    <foldingPart animationName="folding" speedScale="1"/>
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <cylindered>
+        <movingParts>
+            <movingPart invertZ="true" isActiveDirty="true" node="pist" referenceFrame="pist" referencePoint="bod1" scaleZ="true">
+                <translatingPart node="pistv1"/>
+            </movingPart>
+            <movingPart invertZ="true" isActiveDirty="true" node="pist1" referenceFrame="pist1" referencePoint="bod2" scaleZ="true">
+                <translatingPart node="pistv2"/>
+            </movingPart>
+        </movingParts>
+    </cylindered>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit fillTypes="CHMEL" showOnHud="false" unitTextOverride="$l10n_unit_literShort"/>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <dischargeable requiresTipOcclusionArea="false">
+        <dischargeNode node="dischargeNode" canStartDischargeAutomatically="true" emptySpeed="30000" fillUnitIndex="1" maxDistance="32" stopDischargeOnEmpty="false">
+            <info length="0.4" width="0.4"/>
+        </dischargeNode>
+    </dischargeable>
+
+    <combine allowThreshingDuringRain="true">
+        <sounds>
+            <start template="MEX5_FORAGE_START"/>
+            <stop template="MEX5_FORAGE_STOP"/>
+            <work template="MEX5_FORAGE_WORK"/>
+        </sounds>
+    </combine>
+
+    <cutter allowCuttingWhileRaised="false" fruitTypes="chmel">
+        <animationNodes>
+            <animationNode class="ScrollingAnimation" node="retez" scrollSpeed="3.0" shaderParameterComponent="1" turnOffFadeTime="2" turnOnFadeTime="2"/>
+        </animationNodes>
+    </cutter>
+
+    <turnOnVehicle turnOffIfNotAllowed="true"/>
+    <foliageBending>
+        <bendingNode minX="-0.45" maxX="0.45" minZ="-1" maxZ="1" yOffset="1"/>
+    </foliageBending>
+
+    <wearable wearDuration="1080" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="2" fieldMultiplier="2"/>
+    <ai>
+        <areaMarkers leftNode="aiMarkerLeft" rightNode="aiMarkerRight" backNode="aiMarkerBack"/>
+        <collisionTrigger node="aiCollisionTrigger"/>
+    </ai>
+
+    <i3dMappings>
+        <i3dMapping id="strahavac" node="0>0"/>
+        <i3dMapping id="attacherJointstr" node="0>0|2"/>
+        <i3dMapping id="attacherJointstr1" node="0>0|3"/>
+        <i3dMapping id="Holder" node="0>3"/>
+        <i3dMapping id="Holder1" node="0>1|5"/>
+        <i3dMapping id="Holder2" node="0>1|6"/>
+        <i3dMapping id="Cutter" node="0>0|0"/>
+        <i3dMapping id="ozub" node="0>0|0|4"/>
+        <i3dMapping id="valecek" node="0>0|0|3|0"/>
+        <i3dMapping id="valecek1" node="0>0|0|3|1"/>
+        <i3dMapping id="dischargeNode" node="0>0|0|9|1"/>
+        <i3dMapping id="supportback1" node="0>2|1"/>
+        <i3dMapping id="supportback2" node="0>2|2"/>
+        <i3dMapping id="supportfront" node="0>2|0"/>
+        <i3dMapping id="Front_vis"/>
+        <i3dMapping id="hydraulik" node="0>1|0"/>
+        <i3dMapping id="hydraulik1" node="0>1|0|0"/>
+        <i3dMapping id="hydraulik2" node="0>0|0|7|3"/>
+        <i3dMapping id="workAreaStart" node="0>0|0|7|0"/>
+        <i3dMapping id="workAreaWidth" node="0>0|0|7|1"/>
+        <i3dMapping id="workAreaHeight" node="0>0|0|7|2"/>
+        <i3dMapping id="groundReferenceNode" node="0>0|0|7|3"/>
+        <i3dMapping id="aiMarkerLeft" node="0>2|0|0"/>
+        <i3dMapping id="aiMarkerRight" node="0>2|0|1"/>
+        <i3dMapping id="aiMarkerBack" node="0>2|0|2"/>
+        <i3dMapping id="aiCollisionTrigger" node="0>2|2"/>
+        <i3dMapping id="trailerTrigger" node="0>2|1"/>
+        <i3dMapping id="testAreaStart1" node="0>0|0|8|0|0"/>
+        <i3dMapping id="testAreaWidth1" node="0>0|0|8|0|0|0"/>
+        <i3dMapping id="testAreaHeight1" node="0>0|0|8|0|0|1"/>
+        <i3dMapping id="testAreaStart2" node="0>0|0|8|0|1"/>
+        <i3dMapping id="testAreaWidth2" node="0>0|0|8|0|1|0"/>
+        <i3dMapping id="testAreaHeight2" node="0>0|0|8|0|1|1"/>
+        <i3dMapping id="testAreaStart3" node="0>0|0|8|0|2"/>
+        <i3dMapping id="testAreaWidth3" node="0>0|0|8|0|2|0"/>
+        <i3dMapping id="testAreaHeight3" node="0>0|0|8|0|2|1"/>
+        <i3dMapping id="effectRight" node="0>0|0|8|1|0"/>
+        <i3dMapping id="effectRight2" node="0>0|0|8|1|1"/>
+        <i3dMapping id="effectRight3" node="0>0|0|8|1|2"/>
+        <i3dMapping id="pist" node="0>1|1"/>
+        <i3dMapping id="pist1" node="0>1|2"/>
+        <i3dMapping id="bod1" node="0>1|0|1"/>
+        <i3dMapping id="bod2" node="0>1|0|0|1"/>
+        <i3dMapping id="pistv1" node="0>1|1|1"/>
+        <i3dMapping id="pistv2" node="0>1|2|1"/>
+        <i3dMapping id="retez" node="0>0|0|5"/>
+        <i3dMapping id="hadice" node="0>5|1"/>
+        <i3dMapping id="hadice1" node="0>5|2"/>
+        <i3dMapping id="hadice2" node="0>5|3"/>
+        <i3dMapping id="hadice3" node="0>5|4"/>
+        <i3dMapping id="hadice4" node="0>5|5"/>
+        <i3dMapping id="hadice5" node="0>0|0|16"/>
+        <i3dMapping id="hadice6" node="0>0|0|17"/>
+        <i3dMapping id="hydracon" node="0>4|19|0"/>
+        <i3dMapping id="hydracon1" node="0>5|1|0"/>
+        <i3dMapping id="hydracon2" node="0>5|1|1"/>
+        <i3dMapping id="hydracon3" node="0>0|0|13|1"/>
+        <i3dMapping id="hydracon4" node="0>0|0|13|0"/>
+        <i3dMapping id="hydracon5" node="0>0|0|12|1"/>
+        <i3dMapping id="hydracon6" node="0>0|0|12|0"/>
+        <i3dMapping id="hydracon7" node="0>5|0|0"/>
+        <i3dMapping id="hydracon8" node="0>5|0|1"/>
+        <i3dMapping id="hydracon9" node="0>1|1|2|0"/>
+        <i3dMapping id="hydracon10" node="0>4|18|0"/>
+        <i3dMapping id="hydracon11" node="0>5|2|0"/>
+        <i3dMapping id="hydracon12" node="0>5|2|1"/>
+        <i3dMapping id="hydracon13" node="0>0|0|15|0"/>
+        <i3dMapping id="hydracon14" node="0>0|0|15|1"/>
+        <i3dMapping id="hydracon15" node="0>0|0|14|0"/>
+        <i3dMapping id="hydracon16" node="0>0|0|14|1"/>
+        <i3dMapping id="hydracon17" node="0>1|2|2|0"/>
+        <i3dMapping id="hydracon18" node="0>0|0|16|0"/>
+        <i3dMapping id="hydracon19" node="0>5|3|0"/>
+        <i3dMapping id="hydracon20" node="0>5|3|1"/>
+        <i3dMapping id="hydracon21" node="0>4|17|0"/>
+        <i3dMapping id="hydracon22" node="0>0|0|17|0"/>
+        <i3dMapping id="hydracon23" node="0>5|4|0"/>
+        <i3dMapping id="hydracon24" node="0>5|4|1"/>
+        <i3dMapping id="hydracon25" node="0>4|16|0"/>
+        <i3dMapping id="hydracon26" node="0>4|15|0"/>
+        <i3dMapping id="hydracon27" node="0>5|5|0"/>
+        <i3dMapping id="hydracon28" node="0>4|14|0"/>
+        <i3dMapping id="hydracon29" node="0>5|5|1"/>
+    </i3dMappings>
+    <!--Non converted elements, might require manual conversion or are obsolete:
+
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle>
+    <realDirtColor useSimpleMode="true"/>
+    <attachable>
+        <inputAttacherJoints>
+            <objectChange node="0>1|6" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="0>1|5" visibilityActive="true" visibilityInactive="false"/>
+        </inputAttacherJoints>
+        <brakeForce>0.8</brakeForce>
+    </attachable>
+
+    <cutter>
+        <testAreas>
+            <testArea startNode="testAreaStart1" widthNode="testAreaWidth1" heightNode="testAreaHeight1"/>
+            <testArea startNode="testAreaStart2" widthNode="testAreaWidth2" heightNode="testAreaHeight2"/>
+            <testArea startNode="testAreaStart3" widthNode="testAreaWidth3" heightNode="testAreaHeight3"/>
+        </testAreas>
+    </cutter>
+
+    <i3dMappings>
+        <i3dMapping node=""/>
+    </i3dMappings>
+</vehicle>
+-->
+</vehicle>

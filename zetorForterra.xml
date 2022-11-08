@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="tractor" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Forterra HD</name>
+        <specs>
+            <power>127</power>
+            <maxSpeed>40</maxSpeed>
+        </specs>
+        <functions>
+            <function>$l10n_function_tractor</function>
+            <function>$l10n_function_tractorFrontloader</function>
+        </functions>
+        <image>store/store_ZetorForterra.dds</image>
+        <price>93000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>Lizard</brand>
+        <category>tractorsM</category>
+        <vertexBufferMemoryUsage>3404648</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>523308</indexBufferMemoryUsage>
+        <textureMemoryUsage>16253680</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_tractor</typeDesc>
+        <filename>vehicles/zetorForterra.i3d</filename>
+        <size width="3" length="5" lengthOffset="-0.3"/>
+        <components>
+            <component centerOfMass="0 1 -0.15" solverIterationCount="10" mass="2611"/>
+            <component centerOfMass="0 0 0" solverIterationCount="10" mass="1220"/>
+            <joint component1="1" component2="2" node="0>15|5" rotLimit="0 0 5" maxRotDriveForce="0 0 20" rotDriveRotation="0 0 0" rotDriveSpring="0 0 30" rotDriveDamping="0 0 20" rotLimitSpring="0 0 4000" rotLimitDamping="0 0 45" breakable="false"/>
+        </components>
+        <schemaOverlay name="VEHICLE" attacherJointPosition="0.5 0"/>
+        <sounds filename="sounds/ZetorForterraPower.xml"/>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="TRELLEBORG">
+                <wheels autoRotateBackSpeed="1.7">
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM600/320_85R28.xml" configId="rim4" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.6" repr="kolol" driveNode="drivel" forcePointRatio="0.2" initialCompression="20" suspTravel="0.25" spring="29" damper="60"/>
+                        <steering node="rizeni" nodeMinTransX="0.136" nodeMaxTransX="-0.136"/>
+                        <fender node="centerl" rotMax="35"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM600/320_85R28.xml" configId="rim4" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.6" repr="kolop" driveNode="drivep" forcePointRatio="0.2" initialCompression="20" suspTravel="0.25" spring="29" damper="60"/>
+                        <fender node="centerp" rotMin="-35"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM700/520_70R38.xml" configId="rim3" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="1.6" repr="kololz" forcePointRatio="0.3" initialCompression="20" suspTravel="0.25" spring="26" damper="70"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM700/520_70R38.xml" configId="rim3" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="1.6" repr="kololp" forcePointRatio="0.3" initialCompression="20" suspTravel="0.25" spring="26" damper="70"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="kolobodl" translationActive="-0.03 0 0"/>
+                <objectChange node="kolobodp" translationActive="0.03 0 0"/>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelWeights" price="1200" brand="TRELLEBORG">
+                <wheels autoRotateBackSpeed="1.7">
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM600/320_85R28.xml" configId="rim4" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.6" repr="kolol" driveNode="drivel" forcePointRatio="0.2" initialCompression="20" suspTravel="0.25" spring="29" damper="60"/>
+                        <steering node="rizeni" nodeMinTransX="0.136" nodeMaxTransX="-0.136"/>
+                        <fender node="centerl" rotMax="35"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM600/320_85R28.xml" configId="rim4" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.6" repr="kolop" driveNode="drivep" forcePointRatio="0.2" initialCompression="20" suspTravel="0.25" spring="29" damper="60"/>
+                        <fender node="centerp" rotMin="-35"/>
+                    </wheel>
+                    <wheel filename="wheels/TM800_650_65R38.xml" configId="weight" isLeft="true" hasTireTracks="true" hasParticles="true" additionalColor="SHARED_BLACK2">
+                        <physics rotSpeed="0" restLoad="1.6" repr="kololz" forcePointRatio="0.3" initialCompression="20" suspTravel="0.25" spring="26" damper="70"/>
+                    </wheel>
+                    <wheel filename="wheels/TM800_650_65R38.xml" configId="weight" isLeft="false" hasTireTracks="true" hasParticles="true" additionalColor="SHARED_BLACK2">
+                        <physics rotSpeed="0" restLoad="1.6" repr="kololp" forcePointRatio="0.3" initialCompression="20" suspTravel="0.25" spring="26" damper="70"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="kolobodl" translationActive="-0.03 0 0"/>
+                <objectChange node="kolobodp" translationActive="0.03 0 0"/>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="2000" brand="TRELLEBORG">
+                <wheels autoRotateBackSpeed="1.7">
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM800/540_65R26.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.6" repr="kolol" driveNode="drivel" forcePointRatio="0.2" initialCompression="20" suspTravel="0.25" spring="29" damper="60"/>
+                        <steering node="rizeni" nodeMinTransX="0.136" nodeMaxTransX="-0.136"/>
+                        <fender node="centerl" rotMax="35"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM800/540_65R26.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.6" repr="kolop" driveNode="drivep" forcePointRatio="0.2" initialCompression="20" suspTravel="0.25" spring="29" damper="60"/>
+                        <fender node="centerp" rotMin="-35"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM800/650_65R38_HS.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="1.6" repr="kololz" forcePointRatio="0.3" initialCompression="20" suspTravel="0.25" spring="26" damper="70"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM800/650_65R38_HS.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="1.6" repr="kololp" forcePointRatio="0.3" initialCompression="20" suspTravel="0.25" spring="26" damper="70"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroadWeights" price="3000" brand="TRELLEBORG">
+                <wheels autoRotateBackSpeed="1.7">
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM800/540_65R26.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.6" repr="kolol" driveNode="drivel" forcePointRatio="0.2" initialCompression="20" suspTravel="0.25" spring="29" damper="60"/>
+                        <steering node="rizeni" nodeMinTransX="0.136" nodeMaxTransX="-0.136"/>
+                        <fender node="centerl" rotMax="35"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM800/540_65R26.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.6" repr="kolop" driveNode="drivep" forcePointRatio="0.2" initialCompression="20" suspTravel="0.25" spring="29" damper="60"/>
+                        <fender node="centerp" rotMin="-35"/>
+                    </wheel>
+                    <wheel filename="wheels/TM800_650_65R38_HS.xml" isLeft="true" hasTireTracks="true" hasParticles="true" additionalColor="SHARED_BLACK2">
+                        <physics rotSpeed="0" restLoad="1.6" repr="kololz" forcePointRatio="0.3" initialCompression="20" suspTravel="0.25" spring="26" damper="70"/>
+                    </wheel>
+                    <wheel filename="wheels/TM800_650_65R38_HS.xml" isLeft="false" hasTireTracks="true" hasParticles="true" additionalColor="SHARED_BLACK2">
+                        <physics rotSpeed="0" restLoad="1.6" repr="kololp" forcePointRatio="0.3" initialCompression="20" suspTravel="0.25" spring="26" damper="70"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelNarrow" price="1000" brand="TRELLEBORG">
+                <wheels autoRotateBackSpeed="1.7">
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM100/230_95R32.xml" configId="rim4" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.6" repr="kolol" driveNode="drivel" forcePointRatio="0.2" initialCompression="20" suspTravel="0.25" spring="29" damper="60"/>
+                        <steering node="rizeni" nodeMinTransX="0.136" nodeMaxTransX="-0.136"/>
+                        <fender node="centerl" rotMax="35"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM100/230_95R32.xml" configId="rim4" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.6" repr="kolop" driveNode="drivep" forcePointRatio="0.2" initialCompression="20" suspTravel="0.25" spring="29" damper="60"/>
+                        <fender node="centerp" rotMin="-35"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM100/270_95R48.xml" configId="rim3" isLeft="false" hasTireTracks="true" hasParticles="true" additionalColor="SHARED_BLACK2">
+                        <physics rotSpeed="0" restLoad="1.6" repr="kololz" forcePointRatio="0.3" initialCompression="20" suspTravel="0.25" spring="26" damper="70"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM100/270_95R48.xml" configId="rim3" isLeft="true" hasTireTracks="true" hasParticles="true" additionalColor="SHARED_BLACK2">
+                        <physics rotSpeed="0" restLoad="1.6" repr="kololp" forcePointRatio="0.3" initialCompression="20" suspTravel="0.25" spring="26" damper="70"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="kolobodl" translationActive="-0.01 0 0"/>
+                <objectChange node="kolobodp" translationActive="0.01 0 0"/>
+                <objectChange node="drivel" translationActive="0.02 0 0"/>
+                <objectChange node="drivep" translationActive="0.02 0 0"/>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBack" price="4000" brand="TRELLEBORG">
+                <wheels autoRotateBackSpeed="1.7">
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM800/540_65R24.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.6" repr="kolol" driveNode="drivel" forcePointRatio="0.2" initialCompression="20" suspTravel="0.25" spring="29" damper="60"/>
+                        <steering node="rizeni" nodeMinTransX="0.136" nodeMaxTransX="-0.136"/>
+                        <fender node="centerl" rotMax="35"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM800/540_65R24.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.6" repr="kolop" driveNode="drivep" forcePointRatio="0.2" initialCompression="20" suspTravel="0.25" spring="29" damper="60"/>
+                        <fender node="centerp" rotMin="-35"/>
+                    </wheel>
+                    <wheel filename="wheels/TM800_650_65R38.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="1.6" repr="kololz" forcePointRatio="0.3" initialCompression="20" suspTravel="0.25" spring="26" damper="70"/>
+                        <additionalWheel filename="wheels/TM800_650_65R38.xml" configId="dual" offset="0.2" hasParticles="true" hasTireTracks="true">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel filename="wheels/TM800_650_65R38.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="1.6" repr="kololp" forcePointRatio="0.3" initialCompression="20" suspTravel="0.25" spring="26" damper="70"/>
+                        <additionalWheel filename="wheels/TM800_650_65R38.xml" configId="dual" offset="0.2" hasParticles="true" hasTireTracks="true">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="6000" brand="TRELLEBORG">
+                <wheels autoRotateBackSpeed="1.7">
+                    <wheel filename="wheels/540_65R24.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.6" repr="kolol" driveNode="drivel" forcePointRatio="0.2" initialCompression="20" suspTravel="0.25" spring="29" damper="60"/>
+                        <steering node="rizeni" nodeMinTransX="0.136" nodeMaxTransX="-0.136"/>
+                        <additionalWheel filename="wheels/540_65R24.xml" configId="dual" offset="0.2" hasParticles="true" hasTireTracks="true">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>
+                        </additionalWheel>
+                        <fender node="centerl" rotMax="35"/>
+                    </wheel>
+                    <wheel filename="wheels/540_65R24.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.6" repr="kolop" driveNode="drivep" forcePointRatio="0.2" initialCompression="20" suspTravel="0.25" spring="29" damper="60"/>
+                        <additionalWheel filename="wheels/540_65R24.xml" configId="dual" offset="0.2" hasParticles="true" hasTireTracks="true">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>
+                        </additionalWheel>
+                        <fender node="centerp" rotMin="-35"/>
+                    </wheel>
+                    <wheel filename="wheels/TM800_650_65R38.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="1.6" repr="kololz" forcePointRatio="0.3" initialCompression="20" suspTravel="0.25" spring="26" damper="70"/>
+                        <additionalWheel filename="wheels/TM800_650_65R38.xml" configId="dual" offset="0.2" hasParticles="true" hasTireTracks="true">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel filename="wheels/TM800_650_65R38.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="1.6" repr="kololp" forcePointRatio="0.3" initialCompression="20" suspTravel="0.25" spring="26" damper="70"/>
+                        <additionalWheel filename="wheels/TM800_650_65R38.xml" configId="dual" offset="0.2" hasParticles="true" hasTireTracks="true">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelCommunal" price="1000" brand="NOKIAN">
+                <wheels autoRotateBackSpeed="2.2">
+                    <wheel filename="$data/shared/wheels/tires/nokian/TRI2/480_65R28.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.7" repr="kolol" driveNode="drivel" forcePointRatio="0.5" initialCompression="25" suspTravel="0.19" spring="32" damper="40"/>
+                        <steering node="rizeni" nodeMinTransX="0.136" nodeMaxTransX="-0.136"/>
+                        <fender node="centerl" rotMax="35"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/nokian/TRI2/480_65R28.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.7" repr="kolop" driveNode="drivep" forcePointRatio="0.5" initialCompression="25" suspTravel="0.19" spring="32" damper="40"/>
+                        <fender node="centerp" rotMin="-35"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/nokian/TRI2/540_80R38.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="1.8" repr="kololz" forcePointRatio="0.5" initialCompression="20" suspTravel="0.25" spring="29" damper="40"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/nokian/TRI2/540_80R38.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="1.8" repr="kololp" forcePointRatio="0.5" initialCompression="20" suspTravel="0.25" spring="29" damper="40"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+        <hubs>
+            <color0>SHARED_BLACK1</color0>
+            <color1>SHARED_BLACK1</color1>
+            <hub linkNode="kolobodl" filename="$data/shared/wheels/hubs/hub_n10_11.xml" isLeft="true" scale="0.33 0.33 0.33"/>
+            <hub linkNode="kolobodp" filename="$data/shared/wheels/hubs/hub_n10_11.xml" isLeft="false" scale="0.33 0.33 0.33"/>
+            <hub linkNode="kololz" filename="$data/shared/wheels/hubs/hub_n10_14.xml" isLeft="true" scale="0.33 0.33 0.33"/>
+            <hub linkNode="kololp" filename="$data/shared/wheels/hubs/hub_n10_14.xml" isLeft="false" scale="0.33 0.33 0.33"/>
+        </hubs>
+        <ackermannSteeringConfigurations>
+            <ackermannSteering rotSpeed="60" rotMax="47" rotCenterWheel1="3" rotCenterWheel2="4"/>
+        </ackermannSteeringConfigurations>
+    </wheels>
+
+    <rimColorConfigurations>
+        <rimColorConfiguration color="0.5860 0.0000 0.0000 1" price="0" name="$l10n_RED"/>
+        <rimColorConfiguration color="0.0265 0.1332 0.0415 0" price="200" name="$l10n_GREEN"/>
+        <rimColorConfiguration color="0.8832 0.1636 0.0046 1" price="200" name="$l10n_ORANGE"/>
+        <rimColorConfiguration color="0.68 0.68 0.68 1" price="200" name="$l10n_GREY"/>
+        <colorNode node="viz1"/>
+    </rimColorConfigurations>
+
+    <attacherJoints>
+        <attacherJoint allowsJointLimitMovement="false" comboTime="1" moveTime="2.5" node="bod_pripojeni_zadni_ramena" upperRotationOffset="-1.47">
+            <bottomArm referenceNode="bod_pripojeni_zadni_ramena2" rotationNode="ramena" startRotation="-17 0 0" translationNode="spojramenadf" zScale="-1"/>
+            <distanceToGround lower="0.38" upper="1.19"/>
+            <objectChange node="zadni_pripojeni_vleku" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="zadni_spodni_pripojeni_vleku" visibilityActive="false" visibilityInactive="true"/>
+            <rotationNode lowerRotation="-15 0 0" node="rotace_zadni_pripojeni1" upperRotation="35 0 0"/>
+            <rotationNode2 node="rotace_zadni_pripojeni2"/>
+            <schema invertX="false" position="1 0" rotation="0"/>
+            <topArm baseNode="bod_treti_bod_zadni" filename="$data/shared/assets/upperLinks/walterscheid02.i3d" zScale="-1"/>
+        </attacherJoint>
+        <attacherJoint allowsJointLimitMovement="false" comboTime="1" jointType="trailer" lowerRotLimit="10 50 50" node="bod_pripojeni_zadni_vlek">
+            <distanceToGround lower="0.44" upper="1.06"/>
+            <objectChange node="bod_treti_bod_zadni" visibilityActive="false" visibilityInactive="true"/>
+            <schema invertX="false" position="1 0" rotation="0"/>
+        </attacherJoint>
+        <attacherJoint comboTime="1" jointType="trailerLow" lowerRotLimit="10 60 50" node="zadni_spodni_bod_pripojeni">
+            <distanceToGround lower="0.44" upper="0.69"/>
+            <objectChange node="ramena" rotationActive="35 0 0" rotationInactive="-17 0 0"/>
+            <objectChange node="zadni_pripojeni_vleku" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="bod_treti_bod_zadni" visibilityActive="false" visibilityInactive="true"/>
+            <schema invertX="false" position="1 0" rotation="0"/>
+        </attacherJoint>
+        <attacherJointConfigurations>
+            <attacherJointConfiguration name="$l10n_configuration_strhavaAttacher" price="0">
+                <attacherJoint allowsJointLimitMovement="false" comboTime="0" jointType="strhtrailer" node="pripojeni_strhavac">
+                    <schema invertX="true" position="1 0" rotation="0"/>
+                    <transNode maxY="1" minY="0.4"/>
+                </attacherJoint>
+                <objectChange node="ramenapred" visibilityActive="false"/>
+                <objectChange node="transform_kabelaz" visibilityActive="false"/>
+                <objectChange node="hydraulika1" visibilityActive="false"/>
+                <objectChange node="drzak_strhavace" visibilityActive="true"/>
+                <objectChange node="uchyceni_prednich_ramen" visibilityActive="false"/>
+            </attacherJointConfiguration>
+            <attacherJointConfiguration name="$l10n_configuration_frontAttacher" price="2500">
+                <attacherJoint allowsJointLimitMovement="false" comboTime="0" moveTime="2.5" node="rotace_prednich_ramen2" upperRotationOffset="1.47">
+                    <bottomArm referenceNode="bod_predni_ramena" rotationNode="ramenapred" startRotation="-15 0 0" translationNode="predni_vidle" zScale="1"/>
+                    <distanceToGround lower="0.36" upper="0.99"/>
+                    <objectChange node="drzak_strhavace" rotationActive="-6.5 19 6.5" rotationInactive="-74 19 3.5" visibilityActive="false"/>
+                    <objectChange node="ovladac" rotationActive="-6.5 -19 -6.5" rotationInactive="-74 -19 -3.5" visibilityActive="false"/>
+                    <rotationNode lowerRotation="21 0 0" node="pripojeni_predni_ramena" upperRotation="-26 0 0"/>
+                    <rotationNode2 node="rotace_prednich_ramen1"/>
+                    <schema invertX="true" position="1 0" rotation="0"/>
+                    <topArm baseNode="predni_treti_bod" filename="$data/shared/assets/upperLinks/walterscheid01.i3d" toggleVisibility="true" zScale="1"/>
+                </attacherJoint>
+                <attacherJoint comboTime="0" jointType="trailer" lowerRotLimit="10 65 50" node="pripojeni_vlek_predni">
+                    <objectChange node="predni_vidle_leva" visibilityActive="false" visibilityInactive="true"/>
+                    <objectChange node="predni_vidle_prava" visibilityActive="false" visibilityInactive="true"/>
+                    <schema invertX="false" position="1 0" rotation="0"/>
+                </attacherJoint>
+            </attacherJointConfiguration>
+        </attacherJointConfigurations>
+        <sounds>
+            <attach linkNode="viz" template="ATTACH_01"/>
+            <hydraulic linkNode="viz" template="DEFAULT_HYDRAULIC_SOUND"/>
+        </sounds>
+    </attacherJoints>
+
+    <powerTakeOffs>
+        <output outputNode="kardanzad" attacherJointIndices="1 2 3"/>
+        <output outputNode="kardanpred" attacherJointIndices="4"/>
+    </powerTakeOffs>
+
+    <connectionHoses>
+        <target attacherJointIndices="1 2 3" node="hydraulika_vystup_1" socket="hydraulic01" type="hydraulicOut"/>
+        <target attacherJointIndices="1 2 3" node="hydraulika_vystup_2" socket="hydraulic03" type="hydraulicOut"/>
+        <target attacherJointIndices="1 2 3" node="hydraulika_vystup_3" socket="hydraulic03" type="hydraulicOut"/>
+        <target attacherJointIndices="1 2 3" node="hydraulika_vystup_4" socket="hydraulic01" type="hydraulicOut"/>
+        <target attacherJointIndices="1 2 3" node="hydraulika_vystup_5" socket="hydraulic03" type="hydraulicOut"/>
+        <target attacherJointIndices="1 2 3" node="hydraulika_vstup_1" socket="hydraulic02" type="hydraulicIn"/>
+        <target attacherJointIndices="1 2 3" node="hydraulika_vstup_2" socket="hydraulic04" type="hydraulicIn"/>
+        <target attacherJointIndices="1 2 3" node="hydraulika_vstup_3" socket="hydraulic04" type="hydraulicIn"/>
+        <target attacherJointIndices="1 2 3" node="hydraulika_vstup_4" socket="hydraulic02" type="hydraulicIn"/>
+        <target attacherJointIndices="1 2 3" node="elektrika1" socket="electric" type="electric"/>
+        <target attacherJointIndices="4 5" node="elektrika2" socket="electric" type="electric"/>
+        <target attacherJointIndices="1 2 3" node="vzduch1" socket="air_red" type="airDoubleRed"/>
+        <target attacherJointIndices="1 2 3" node="vzduch2" socket="air_yellow" type="airDoubleYellow"/>
+        <target attacherJointIndices="4 5" node="hydraulika_vstup_5" socket="hydraulic01" type="hydraulicIn"/>
+        <target attacherJointIndices="4 5" node="hydraulika_vystup_6" socket="hydraulic01" type="hydraulicOut"/>
+        <toolConnectorHose mountingNode="drzak_hydrauliky_1">
+            <endTarget attacherJointIndices="1 4 4" node="drzak_bod_zadni_1" type="TOOL_CONNECTOR_BOTTOM_01"/>
+            <startTarget attacherJointIndices="4 5" node="drzak_bod predni_1" type="TOOL_CONNECTOR_BOTTOM_01"/>
+        </toolConnectorHose>
+        <toolConnectorHose mountingNode="drzak_hydrauliky_2">
+            <endTarget attacherJointIndices="1 4 4" node="drzak_bod_zadni_2" type="TOOL_CONNECTOR_BOTTOM_02"/>
+            <startTarget attacherJointIndices="4 5" node="drzak_bod predni_2" type="TOOL_CONNECTOR_BOTTOM_02"/>
+        </toolConnectorHose>
+        <toolConnectorHose mountingNode="drzak_hydrauliky_3">
+            <endTarget attacherJointIndices="1 4 4" node="drzak_bod_zadni_3" type="TOOL_CONNECTOR_BOTTOM_03"/>
+            <startTarget attacherJointIndices="4 5" node="drzak_bod predni_3" type="TOOL_CONNECTOR_BOTTOM_03"/>
+        </toolConnectorHose>
+        <toolConnectorHose mountingNode="drzak_hydrauliky_4">
+            <endTarget attacherJointIndices="1 4 4" node="drzak_bod_zadni_4" type="TOOL_CONNECTOR_BOTTOM_04"/>
+            <startTarget attacherJointIndices="4 5" node="drzak_bod predni_4" type="TOOL_CONNECTOR_BOTTOM_04"/>
+        </toolConnectorHose>
+        <toolConnectorHose mountingNode="drzak_hydrauliky_5">
+            <endTarget attacherJointIndices="1 4 4" node="drzak_bod_zadni_5" type="TOOL_CONNECTOR_TOP_RIGHT"/>
+            <startTarget attacherJointIndices="4 5" node="drzak_bod predni_5" type="TOOL_CONNECTOR_TOP_RIGHT"/>
+        </toolConnectorHose>
+    </connectionHoses>
+
+    <frontloaderConfigurations>
+        <frontloaderConfiguration name="$l10n_ui_no" price="0">
+            <objectChange node="bezramcel" visibilityActive="false"/>
+        </frontloaderConfiguration>
+        <frontloaderConfiguration name="$l10n_ui_yes" price="1500">
+            <objectChange node="bezramcel" visibilityActive="true" visibilityInactive="false"/>
+        </frontloaderConfiguration>
+    </frontloaderConfigurations>
+
+    <lights>
+        <states>
+            <state lightTypes="0"/>
+            <state lightTypes="0 1"/>
+            <state lightTypes="0 1 2"/>
+        </states>
+        <realLights>
+            <low>
+                <light node="svetlo_low1" lightTypes="0"/>
+                <light node="panel4" lightTypes="0"/>
+                <light node="svetlo_low2" lightTypes="1"/>
+                <light node="svetlo_low3" lightTypes="2"/>
+                <light node="svetlo_low4" lightTypes="3"/>
+            </low>
+            <high>
+                <light node="svetlo_high1" lightTypes="0"/>
+                <light node="panel4" lightTypes="0"/>
+                <light node="svetlo_high2" lightTypes="1"/>
+                <light node="svetlo_high3" lightTypes="2"/>
+                <light node="svetlo_high4" lightTypes="3"/>
+                <light node="svetlo_high5" lightTypes="0"/>
+                <turnLightLeft node="svedlo_blinkr_levy1"/>
+                <turnLightLeft node="svedlo_blinkr_levy2"/>
+                <turnLightRight node="svedlo_blinkr_pravy1"/>
+                <turnLightRight node="svedlo_blinkr_pravy2"/>
+                <brakeLight node="svetlo_brzdy"/>
+                <interiorLight node="0>2|4|0"/>
+            </high>
+        </realLights>
+        <defaultLights>
+            <defaultLight shaderNode="svetlopod1" lightTypes="0"/>
+            <defaultLight shaderNode="svetlopod2" lightTypes="0"/>
+            <defaultLight shaderNode="svetlodal1" lightTypes="3"/>
+            <defaultLight shaderNode="svetlodal2" lightTypes="3"/>
+            <defaultLight shaderNode="svetlodal3" lightTypes="3"/>
+            <defaultLight shaderNode="svetlodal4" lightTypes="3"/>
+            <defaultLight shaderNode="svetlo_3D_2" lightTypes="0"/>
+            <defaultLight shaderNode="svetlo_3D_3" lightTypes="0"/>
+            <defaultLight shaderNode="svetlo_3D_4" lightTypes="0"/>
+            <defaultLight shaderNode="svetlo_3D_5" lightTypes="0"/>
+            <defaultLight shaderNode="svetlo_3D_6" lightTypes="1" intensity="45"/>
+            <defaultLight shaderNode="svetlo_3D_7" lightTypes="2" intensity="45"/>
+        </defaultLights>
+        <turnLights>
+            <turnLightLeft shaderNode="blinkry_3D_leve1"/>
+            <turnLightLeft shaderNode="blinkry_3D_leve2"/>
+            <turnLightRight shaderNode="blinkry_3D_prave1"/>
+            <turnLightRight shaderNode="blinkry_3D_prave2"/>
+        </turnLights>
+        <brakeLights>
+            <brakeLight shaderNode="brzdy_3D_leve"/>
+            <brakeLight shaderNode="brzdy_3D_prave"/>
+        </brakeLights>
+        <beaconLights>
+            <beaconLight node="majak1" filename="$data/shared/assets/beaconLights/lizard/beaconLight02.xml"/>
+            <beaconLight node="majak2" filename="$data/shared/assets/beaconLights/lizard/beaconLight02.xml"/>
+        </beaconLights>
+        <sounds>
+            <toggleLights template="SWITCH_01"/>
+            <turnLight template="SWITCH_TURNLIGHT"/>
+        </sounds>
+    </lights>
+
+    <enterable isTabbable="true">
+        <exitPoint node="exitpostava"/>
+        <enterReferenceNode node="viz"/>
+        <characterNode node="postava" cameraMinDistance="1.5" spineRotation="-90 0 90">
+            <target ikChain="rightFoot" targetNode="pravanoha"/>
+            <target ikChain="leftFoot" targetNode="levanoha"/>
+            <target ikChain="rightArm" targetNode="pravaruka"/>
+            <target ikChain="leftArm" targetNode="levaruka"/>
+        </characterNode>
+        <characterTargetNodeModifier node="pravanoha" transitionTime="0.1">
+            <state node="pravanoha1" referenceNode="pravanoha4" directionReferenceNode="pravanoha2"/>
+            <state node="pravanoha3" referenceNode="pravanoha5"/>
+        </characterTargetNodeModifier>
+        <cameras>
+            <camera node="vencamera" rotatable="true" rotateNode="rotvencamera" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="4" transMax="35">
+                <raycastNode node="predcam"/>
+                <raycastNode node="zadcam"/>
+            </camera>
+            <camera node="vnitrcamera" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true"/>
+        </cameras>
+        <mirrors>
+            <mirror node="pravezrcat" prio="1"/>
+            <mirror node="levezrcad" prio="1"/>
+        </mirrors>
+    </enterable>
+
+    <suspensions>
+        <suspension node="sedacka" weight="150" minTranslation="-0.05 -0.15 0.0" maxTranslation="0.05 0.15 0.0" suspensionParametersX="20 4" suspensionParametersY="5 1" suspensionParametersZ="20 4"/>
+        <suspension useCharacterTorso="true" weight="90" minRotation="0 -5 -5" maxRotation="0 5 5" suspensionParametersY="7 1" suspensionParametersZ="7 1"/>
+    </suspensions>
+
+    <motorized>
+        <consumerConfigurations>
+            <consumerConfiguration>
+                <consumer fillUnitIndex="1" usage="48" fillType="diesel"/>
+                <consumer fillUnitIndex="2" usage="3.0" fillType="def"/>
+                <consumer fillUnitIndex="3" usage="225" fillType="air" permanentConsumption="false" refillLitersPerSecond="300" refillCapacityPercentage="0.5"/>
+            </consumerConfiguration>
+        </consumerConfigurations>
+        <motorConfigurations>
+            <motorConfiguration name="130 HD" hp="127" price="0">
+                <motor torqueScale="0.538" minRpm="1000" maxRpm="2200" maxForwardSpeed="43" maxBackwardSpeed="15" brakeForce="3.5" lowBrakeForceScale="0.22" lowBrakeForceSpeedLimit="1" rotInertia="0.0012">
+                    <torque normRpm="0.45" torque="0.9"/>
+                    <torque normRpm="0.5" torque="0.97"/>
+                    <torque normRpm="0.59" torque="1"/>
+                    <torque normRpm="0.72" torque="1"/>
+                    <torque normRpm="0.86" torque="0.88"/>
+                    <torque normRpm="1" torque="0.72"/>
+                </motor>
+                <transmission minForwardGearRatio="14.5" maxForwardGearRatio="250" minBackwardGearRatio="40" maxBackwardGearRatio="250"/>
+            </motorConfiguration>
+            <motorConfiguration name="140 HD" hp="136" price="8000">
+                <motor torqueScale="0.578"/>
+            </motorConfiguration>
+            <motorConfiguration name="150 HD" hp="147" price="10000">
+                <motor torqueScale="0.624"/>
+            </motorConfiguration>
+        </motorConfigurations>
+        <differentialConfigurations>
+            <differentialConfiguration>
+                <differentials>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.8" wheelIndex1="1" wheelIndex2="2"/>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.8" wheelIndex1="3" wheelIndex2="4"/>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.8" differentialIndex1="1" differentialIndex2="2"/>
+                </differentials>
+            </differentialConfiguration>
+        </differentialConfigurations>
+        <exhaustEffects>
+            <exhaustEffect node="kour" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.9 0.9 0.9 0.1" maxRpmColor="0.9 0.9 0.9 0.4" minRpmScale="0.05" maxRpmScale="0.5"/>
+        </exhaustEffects>
+        <motorStartDuration>2500</motorStartDuration>
+        <dashboards>
+            <dashboard valueType="rpm" displayType="ANIMATION" groups="MOTOR_ACTIVE" animName="rpmDisplay" minValueAnim="0" maxValueAnim="7000">
+                <default>
+                    <dashboard displayType="EMITTER" groups="MOTOR_ACTIVE" idleValue="-1" intensity="0.3" node="panel1"/>
+                    <dashboard displayType="EMITTER" groups="MOTOR_ACTIVE" idleValue="-1" intensity="0.3" node="panel2"/>
+                    <dashboard displayType="EMITTER" groups="MOTOR_ACTIVE" idleValue="-1" intensity="0.3" node="panel3"/>
+                </default>
+            </dashboard>
+            <dashboard valueType="speed" displayType="NUMBER" groups="MOTOR_ACTIVE" numbers="budik" numberColor="0 0 0 1" precision="1"/>
+        </dashboards>
+    </motorized>
+
+    <drivable>
+        <dashboards>
+            <dashboard displayType="ROT" doInterpolation="true" groups="MOTOR_ACTIVE" maxRot="-10 0 0" minRot="20 0 0" node="pedal" valueType="accelerationAxis"/>
+            <dashboard displayType="ROT" doInterpolation="true" groups="MOTOR_ACTIVE" maxRot="-25 0 0" minRot="-4.5 0 0" node="pedal1" valueType="decelerationAxis"/>
+        </dashboards>
+        <sounds>
+            <waterSplash linkNode="0" template="WATER_SPLASH_01"/>
+        </sounds>
+        <steeringWheel indoorRotation="540" node="volant" outdoorRotation="60"/>
+    </drivable>
+
+    <animations>
+        <animation name="wiperFrontAnimation">
+            <part endRot="2.5 8 83" endTime="0.5" node="steracpred" startRot="-7.8 3.5 -0.5" startTime="0.0"/>
+            <part endRot="-7.8 3.5 -0.5" endTime="1.0" node="steracpred" startRot="2.5 8 83" startTime="0.5"/>
+            <part endRot="2.5 8 83" endTime="1.5" node="steracpred" startRot="-7.8 3.5 -0.5" startTime="1.0"/>
+            <part endRot="-7.8 3.5 -0.5" endTime="2.0" node="steracpred" startRot="2.5 8 83" startTime="1.5"/>
+        </animation>
+        <animation name="wiperBackAnimation">
+            <part endRot="-1.5 2 -140" endTime="0.5" node="steraczad" startRot="8 4 1" startTime="0.0"/>
+            <part endRot="8 4 1" endTime="1.0" node="steraczad" startRot="-1.5 2 -140" startTime="0.5"/>
+            <part endRot="-1.5 2 -140" endTime="1.5" node="steraczad" startRot="8 4 1" startTime="1.0"/>
+            <part endRot="8 4 1" endTime="2.0" node="steraczad" startRot="-1.5 2 -140" startTime="1.5"/>
+        </animation>
+        <animation name="rpmDisplay">
+            <part endRot="0 0 -170" endTime="1" node="rucickarpm" startRot="0 0 0" startTime="0"/>
+        </animation>
+        <animation name="fuelDisplay">
+            <part endRot="0 0 -115" endTime="1" node="rucickapalivo" startRot="0 0 0" startTime="0"/>
+        </animation>
+        <animation name="leftdoor">
+            <part duration="1" endRot="-5.447 48.738 -1.563" node="levedvere" startRot="0 0 0" startTime="0"/>
+        </animation>
+        <animation name="backleftwindow">
+            <part duration="1" endRot="0 9 0" node="leveokno" startRot="0 0 0" startTime="0"/>
+            <part duration="0.2" endRot="0 0 -90" node="levvaklika" startRot="0 0 0" startTime="0"/>
+        </animation>
+        <animation name="rightdoor">
+            <part duration="1" endRot="-5.447 -48.738 -1.563" node="pravedvere" startRot="0 0 0" startTime="0"/>
+        </animation>
+        <animation name="backrightwindow">
+            <part duration="1" endRot="0 -9 0" node="praveokno" startRot="0 0 0" startTime="0"/>
+            <part duration="0.2" endRot="0 0 90" node="pravaklika" startRot="0 0 0" startTime="0"/>
+        </animation>
+        <animation name="window">
+            <part duration="1" endRot="50 0 0" node="oknozad" startRot="0 0 0" startTime="0"/>
+        </animation>
+    </animations>
+
+    <wipers>
+        <wiper animName="wiperFrontAnimation">
+            <state animSpeed="0.75" animPause="2.0"/>
+            <state animSpeed="0.75" animPause="0.0"/>
+            <state animSpeed="1.10" animPause="0.0"/>
+        </wiper>
+        <wiper animName="wiperBackAnimation">
+            <state animSpeed="1.0" animPause="2.0"/>
+        </wiper>
+    </wipers>
+
+    <cylindered>
+        <movingParts>
+            <movingPart isActiveDirty="true" node="hydraulika1" referenceFrame="spojpred" referencePoint="spojpred">
+                <translatingPart node="hydraulikapred"/>
+            </movingPart>
+            <movingPart isActiveDirty="true" localReferencePoint="ramenahydraulika1" node="ramenahydraulika" referenceFrame="spojramenadf" referencePoint="spojramena">
+                <dependentPart node="ramenahydraulika1"/>
+                <dependentPart node="hydraulikazadp"/>
+                <dependentPart node="hydraulikazadl"/>
+            </movingPart>
+            <movingPart node="ramenahydraulika1" referenceFrame="spojramena" referencePoint="spojramena">
+                <dependentPart node="ramenahydraulikap"/>
+                <dependentPart node="ramenahydraulikal"/>
+            </movingPart>
+            <movingPart node="ramenahydraulikap" referenceFrame="spojramenal" referencePoint="spojramenal">
+                <translatingPart node="ramenahydraulikap1"/>
+            </movingPart>
+            <movingPart node="ramenahydraulikal" referenceFrame="spojramenap" referencePoint="spojramenap">
+                <translatingPart node="ramenahydraulikal1"/>
+            </movingPart>
+            <movingPart node="hydraulikazadp" referenceFrame="bodhl" referencePoint="bodl">
+                <translatingPart node="hydraulikazadp1"/>
+            </movingPart>
+            <movingPart node="hydraulikazadl" referenceFrame="bodhl" referencePoint="bodp">
+                <translatingPart node="hydraulikazadl1"/>
+            </movingPart>
+            <movingPart node="cep" referenceFrame="viz">
+                <dependentPart node="napraval"/>
+                <dependentPart node="napraval1"/>
+                <dependentPart node="napraval2"/>
+                <dependentPart node="napraval3"/>
+                <dependentPart node="kynet"/>
+            </movingPart>
+            <movingPart node="napraval" referenceFrame="viz" referencePoint="spojl" scaleZ="true"/>
+            <movingPart node="napraval1" referenceFrame="viz" referencePoint="spojl1" scaleZ="true"/>
+            <movingPart node="napraval2" referenceFrame="viz" referencePoint="napravalb">
+                <translatingPart node="napravalb1"/>
+            </movingPart>
+            <movingPart node="napraval3" referenceFrame="viz" referencePoint="spojl2" scaleZ="true"/>
+            <movingPart node="kynet" referenceFrame="viz" referencePoint="napravast" scaleZ="true"/>
+            <movingPart node="cep1" referenceFrame="viz">
+                <dependentPart node="napravap"/>
+                <dependentPart node="napravap1"/>
+                <dependentPart node="napravap2"/>
+                <dependentPart node="napravap3"/>
+                <dependentPart node="kynet1"/>
+            </movingPart>
+            <movingPart node="napravap" referenceFrame="viz" referencePoint="spojp" scaleZ="true"/>
+            <movingPart node="napravap1" referenceFrame="viz" referencePoint="spojp1" scaleZ="true"/>
+            <movingPart node="napravap2" referenceFrame="viz" referencePoint="napravapb">
+                <translatingPart node="napravapb1"/>
+            </movingPart>
+            <movingPart node="napravap3" referenceFrame="viz" referencePoint="spojp2" scaleZ="true"/>
+            <movingPart node="kynet1" referenceFrame="viz" referencePoint="napravasl" scaleZ="true"/>
+        </movingParts>
+        <movingTools>
+            <movingTool node="ramena">
+                <dependentPart node="ramenahydraulika"/>
+            </movingTool>
+            <movingTool node="ramenapred">
+                <dependentPart node="hydraulika1"/>
+            </movingTool>
+        </movingTools>
+    </cylindered>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit capacity="220" fillTypes="DIESEL" showOnHud="false" showInShop="false" unitTextOverride="$l10n_unit_literShort">
+                        <dashboard valueType="fillLevel" displayType="ANIMATION" groups="MOTOR_ACTIVE" animName="fuelDisplay" minValueAnim="0" maxValueAnim="35"/>
+                    </fillUnit>
+                    <fillUnit capacity="44" fillTypes="DEF" showOnHud="false" showInShop="false" unitTextOverride="$l10n_unit_literShort"/>
+                    <fillUnit capacity="3000" fillTypes="AIR" showOnHud="false" showInShop="false" unitTextOverride="$l10n_unit_literShort"/>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <foliageBending>
+        <bendingNode minX="-1.15" maxX="1.15" minZ="-2.2" maxZ="1.6" yOffset="0.6"/>
+    </foliageBending>
+
+    <baseMaterial>
+        <material name="zetor_mat" baseNode="zetordet">
+            <shaderParameter name="colorMat0" value="ZETOR_RED1"/>
+        </material>
+        <material name="stoll" baseNode="zetordet3">
+            <shaderParameter name="colorMat0" value="STOLL_GREY1"/>
+        </material>
+    </baseMaterial>
+
+    <baseMaterialConfigurations defaultColorIndex="0" useDefaultColors="false">
+        <baseMaterialConfiguration color="0.5860 0.0000 0.0000 0" name="$l10n_RED" price="0">
+            <material name="zetor_mat" shaderParameter="colorMat0"/>
+        </baseMaterialConfiguration>
+        <baseMaterialConfiguration color="0.0265 0.1332 0.0415 0" name="$l10n_GREEN" price="1000"/>
+        <baseMaterialConfiguration color="0.8832 0.1636 0.0046 1" name="$l10n_ORANGE" price="1000"/>
+    </baseMaterialConfigurations>
+
+    <wearable wearDuration="1480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+    <honk>
+        <sound linkNode="viz" template="HONK_NEW_HOLLAND_TRACTOR"/>
+    </honk>
+
+    <ai>
+        <collisionTrigger node="colliseTrigger"/>
+    </ai>
+
+    <i3dMappings>
+        <i3dMapping id="viz" node="0>"/>
+        <i3dMapping id="viz1" node="0>0"/>
+        <i3dMapping id="exitpostava" node="0>3"/>
+        <i3dMapping id="postava" node="0>13|1|0|0"/>
+        <i3dMapping id="pravanoha" node="0>13|1|0|0|1"/>
+        <i3dMapping id="levanoha" node="0>13|1|0|0|2"/>
+        <i3dMapping id="pravaruka" node="0>13|1|2|0|0|0"/>
+        <i3dMapping id="levaruka" node="0>13|1|2|0|0|1"/>
+        <i3dMapping id="pravanoha1" node="0>13|1|0|0|3"/>
+        <i3dMapping id="pravanoha2" node="0>13|1|1|0|0"/>
+        <i3dMapping id="pravanoha3" node="0>13|1|1|1|0"/>
+        <i3dMapping id="pravanoha4" node="0>13|1|1|0"/>
+        <i3dMapping id="pravanoha5" node="0>13|1|1|1"/>
+        <i3dMapping id="vencamera" node="0>1|0|0"/>
+        <i3dMapping id="rotvencamera" node="0>1|0"/>
+        <i3dMapping id="predcam" node="0>1|1"/>
+        <i3dMapping id="zadcam" node="0>1|2"/>
+        <i3dMapping id="vnitrcamera" node="0>13|1|0|1"/>
+        <i3dMapping id="pedal" node="0>13|1|1|0"/>
+        <i3dMapping id="pedal1" node="0>13|1|1|1"/>
+        <i3dMapping id="kolol" node="0>0|0|0"/>
+        <i3dMapping id="kolop" node="0>0|1|0"/>
+        <i3dMapping id="kololz" node="0>0|2"/>
+        <i3dMapping id="kololp" node="0>0|3"/>
+        <i3dMapping id="drivel" node="0>0|0|0|0|0"/>
+        <i3dMapping id="drivep" node="0>0|1|0|0|0"/>
+        <i3dMapping id="centerl" node="0>0|0|0|1"/>
+        <i3dMapping id="centerp" node="0>0|1|0|1"/>
+        <i3dMapping id="volant" node="0>13|1|2|0"/>
+        <i3dMapping id="rizeni" node="0>9|12"/>
+        <i3dMapping id="kolobodl" node="0>0|0|0|0|0|0"/>
+        <i3dMapping id="kolobodp" node="0>0|1|0|0|0|0"/>
+        <i3dMapping id="bezramcel" node="0>5|3|0"/>
+        <i3dMapping id="ramcel" node="0>5|3|0|0"/>
+        <i3dMapping id="zetordet" node="0>13|0"/>
+        <i3dMapping id="zetordet2" node="0>13|0|5"/>
+        <i3dMapping id="zetordet3" node="0>5|3|0"/>
+        <i3dMapping id="colliseTrigger" node="0>7|0"/>
+        <i3dMapping id="ramena" node="0>5|0|1"/>
+        <i3dMapping id="ramenapred" node="0>5|0|4"/>
+        <i3dMapping id="ramenahydraulika" node="0>9|0"/>
+        <i3dMapping id="hydraulika1" node="0>9|3"/>
+        <i3dMapping id="ramenahydraulika1" node="0>9|0|0"/>
+        <i3dMapping id="ramenahydraulikap" node="0>9|0|0|0"/>
+        <i3dMapping id="ramenahydraulikal" node="0>9|0|0|1"/>
+        <i3dMapping id="hydraulikapred" node="0>9|3|0"/>
+        <i3dMapping id="hydraulikazadl" node="0>9|2"/>
+        <i3dMapping id="hydraulikazadp" node="0>9|1"/>
+        <i3dMapping id="ramenahydraulikap1" node="0>9|0|0|0|0"/>
+        <i3dMapping id="ramenahydraulikal1" node="0>9|0|0|1|0"/>
+        <i3dMapping id="hydraulikazadp1" node="0>9|1|0"/>
+        <i3dMapping id="hydraulikazadl1" node="0>9|2|0"/>
+        <i3dMapping id="spojpred" node="0>5|0|4|0|1"/>
+        <i3dMapping id="spojramena" node="0>5|0|1|0|1"/>
+        <i3dMapping id="spojramenadf" node="0>5|0|1|0"/>
+        <i3dMapping id="spojramenal" node="0>5|0|1|0|1|0"/>
+        <i3dMapping id="spojramenap" node="0>5|0|1|0|1|1"/>
+        <i3dMapping id="bodl" node="0>9|0|1"/>
+        <i3dMapping id="bodp" node="0>9|0|2"/>
+        <i3dMapping id="bodhl" node="0>9|13"/>
+        <i3dMapping id="napraval" node="0>9|4"/>
+        <i3dMapping id="napraval1" node="0>9|5"/>
+        <i3dMapping id="napraval2" node="0>9|6"/>
+        <i3dMapping id="napraval3" node="0>9|7"/>
+        <i3dMapping id="napravap" node="0>9|8"/>
+        <i3dMapping id="napravap1" node="0>9|9"/>
+        <i3dMapping id="napravap2" node="0>9|10"/>
+        <i3dMapping id="napravap3" node="0>9|11"/>
+        <i3dMapping id="napravalb" node="0>9|4|0"/>
+        <i3dMapping id="napravalb1" node="0>9|6|0"/>
+        <i3dMapping id="napravapb" node="0>9|8|0"/>
+        <i3dMapping id="napravapb1" node="0>9|10|0"/>
+        <i3dMapping id="napravast" node="0>9|12|0"/>
+        <i3dMapping id="cep" node="0>0|0|0|2"/>
+        <i3dMapping id="kynet" node="0>0|0|0|3"/>
+        <i3dMapping id="cep1" node="0>0|1|0|2"/>
+        <i3dMapping id="kynet1" node="0>0|1|0|3"/>
+        <i3dMapping id="spojl" node="0>0|0|0|2|0"/>
+        <i3dMapping id="spojl1" node="0>0|0|0|2|1"/>
+        <i3dMapping id="spojl2" node="0>0|0|0|2|2"/>
+        <i3dMapping id="spojp" node="0>0|1|0|2|0"/>
+        <i3dMapping id="spojp1" node="0>0|1|0|2|1"/>
+        <i3dMapping id="spojp2" node="0>0|1|0|2|2"/>
+        <i3dMapping id="napravasl" node="0>9|12|1"/>
+        <i3dMapping id="trigerakc" node="0>16"/>
+        <i3dMapping id="tlacinl" node="0>13|0|0|3"/>
+        <i3dMapping id="tlacuotl" node="0>13|0|0|4"/>
+        <i3dMapping id="tlacinp" node="0>13|0|1|3"/>
+        <i3dMapping id="tlacuotp" node="0>13|0|1|4"/>
+        <i3dMapping id="backleftwin" node="0>13|0|2|2|0"/>
+        <i3dMapping id="backrightwin" node="0>13|0|3|2|0"/>
+        <i3dMapping id="backwin" node="0>13|0|4|3"/>
+        <i3dMapping id="sedacka" node="0>13|1|0"/>
+        <i3dMapping id="kour" node="0>8|0|0"/>
+        <i3dMapping id="detail" node="0>11|0"/>
+        <i3dMapping id="detail1" node="0>11|1"/>
+        <i3dMapping id="detail2" node="0>11|2"/>
+        <i3dMapping id="pravezrcat" node="0>12|0"/>
+        <i3dMapping id="levezrcad" node="0>12|1"/>
+        <i3dMapping id="steracpred" node="0>13|0|7"/>
+        <i3dMapping id="steraczad" node="0>13|0|4|2"/>
+        <i3dMapping id="rucickapalivo" node="0>10|1"/>
+        <i3dMapping id="rucickarpm" node="0>10|2"/>
+        <i3dMapping id="levedvere" node="0>13|0|0"/>
+        <i3dMapping id="leveokno" node="0>13|0|2"/>
+        <i3dMapping id="levvaklika" node="0>13|0|2|2"/>
+        <i3dMapping id="pravedvere" node="0>13|0|1"/>
+        <i3dMapping id="praveokno" node="0>13|0|3"/>
+        <i3dMapping id="pravaklika" node="0>13|0|3|2"/>
+        <i3dMapping id="oknozad" node="0>13|0|4"/>
+        <i3dMapping id="budik" node="0>10|0"/>
+        <i3dMapping id="kardanzad" node="0>5|2|0"/>
+        <i3dMapping id="kardanpred" node="0>5|2|1"/>
+        <i3dMapping id="hydraulika_vystup_1" node="0>5|4|0|3"/>
+        <i3dMapping id="hydraulika_vystup_2" node="0>5|4|0|4"/>
+        <i3dMapping id="hydraulika_vystup_3" node="0>5|4|0|5"/>
+        <i3dMapping id="hydraulika_vystup_4" node="0>5|4|0|6"/>
+        <i3dMapping id="hydraulika_vystup_5" node="0>5|4|0|7"/>
+        <i3dMapping id="hydraulika_vystup_6" node="0>5|4|1|2"/>
+        <i3dMapping id="hydraulika_vstup_1" node="0>5|4|0|11"/>
+        <i3dMapping id="hydraulika_vstup_2" node="0>5|4|0|10"/>
+        <i3dMapping id="hydraulika_vstup_3" node="0>5|4|0|9"/>
+        <i3dMapping id="hydraulika_vstup_4" node="0>5|4|0|8"/>
+        <i3dMapping id="hydraulika_vstup_5" node="0>5|4|1|1"/>
+        <i3dMapping id="elektrika1" node="0>5|4|0|0"/>
+        <i3dMapping id="elektrika2" node="0>5|4|1|0"/>
+        <i3dMapping id="vzduch1" node="0>5|4|0|2"/>
+        <i3dMapping id="vzduch2" node="0>5|4|0|1"/>
+        <i3dMapping id="drzak_hydrauliky_1" node="0>5|4|3"/>
+        <i3dMapping id="drzak_hydrauliky_2" node="0>5|4|4"/>
+        <i3dMapping id="drzak_hydrauliky_3" node="0>5|4|5"/>
+        <i3dMapping id="drzak_hydrauliky_4" node="0>5|4|6"/>
+        <i3dMapping id="drzak_hydrauliky_5" node="0>5|4|2"/>
+        <i3dMapping id="drzak_bod predni_1" node="0>5|4|3|0"/>
+        <i3dMapping id="drzak_bod predni_2" node="0>5|4|4|0"/>
+        <i3dMapping id="drzak_bod predni_3" node="0>5|4|5|0"/>
+        <i3dMapping id="drzak_bod predni_4" node="0>5|4|6|0"/>
+        <i3dMapping id="drzak_bod predni_5" node="0>5|4|2|0"/>
+        <i3dMapping id="drzak_bod_zadni_1" node="0>5|4|3|1"/>
+        <i3dMapping id="drzak_bod_zadni_2" node="0>5|4|4|1"/>
+        <i3dMapping id="drzak_bod_zadni_3" node="0>5|4|5|1"/>
+        <i3dMapping id="drzak_bod_zadni_4" node="0>5|4|6|1"/>
+        <i3dMapping id="drzak_bod_zadni_5" node="0>5|4|2|1"/>
+        <i3dMapping id="bod_pripojeni_zadni_ramena" node="0>5|0|0|0|0"/>
+        <i3dMapping id="rotace_zadni_pripojeni1" node="0>5|0|0"/>
+        <i3dMapping id="rotace_zadni_pripojeni2" node="0>5|0|0|0"/>
+        <i3dMapping id="bod_pripojeni_zadni_ramena2" node="0>5|0|1|0|0"/>
+        <i3dMapping id="bod_treti_bod_zadni" node="0>5|0|2"/>
+        <i3dMapping id="zadni_pripojeni_vleku" node="0>5|1|0"/>
+        <i3dMapping id="zadni_spodni_pripojeni_vleku" node="0>5|1|1"/>
+        <i3dMapping id="bod_pripojeni_zadni_vlek" node="0>5|1|0|0"/>
+        <i3dMapping id="rotace_zadni_pripojeni1" node="0>5|0|0"/>
+        <i3dMapping id="zadni_spodni_bod_pripojeni" node="0>5|1|1|0"/>
+        <i3dMapping id="pripojeni_spodni_koule_leva" node="0>5|1|1|1"/>
+        <i3dMapping id="pripojeni_spodni_koule_prava" node="0>5|1|1|2"/>
+        <i3dMapping id="transform_kabelaz" node="0>5|4|1"/>
+        <i3dMapping id="drzak_strhavace" node="0>11|3"/>
+        <i3dMapping id="uchyceni_prednich_ramen" node="0>13|0|6"/>
+        <i3dMapping id="pripojeni_strhavac" node="0>5|1|3"/>
+        <i3dMapping id="rotace_prednich_ramen2" node="0>5|0|3|0|0"/>
+        <i3dMapping id="pripojeni_predni_ramena" node="0>5|0|3"/>
+        <i3dMapping id="rotace_prednich_ramen1" node="0>5|0|3|0"/>
+        <i3dMapping id="predni_vidle" node="0>5|0|4|0"/>
+        <i3dMapping id="bod_predni_ramena" node="0>5|0|4|0|0"/>
+        <i3dMapping id="predni_treti_bod" node="0>5|0|5"/>
+        <i3dMapping id="pripojeni_vlek_predni" node="0>5|1|2"/>
+        <i3dMapping id="predni_vidle_leva" node="0>5|0|4|0|2"/>
+        <i3dMapping id="predni_vidle_prava" node="0>5|0|4|0|3"/>
+        <i3dMapping id="svetlo_brzdy" node="0>2|2|0"/>
+        <i3dMapping id="brzdy_3D_leve" node="0>2|6|0|0"/>
+        <i3dMapping id="brzdy_3D_prave" node="0>2|6|1|0"/>
+        <i3dMapping id="svedlo_blinkr_levy1" node="0>2|3|0|0"/>
+        <i3dMapping id="svedlo_blinkr_levy2" node="0>2|3|0|1"/>
+        <i3dMapping id="svedlo_blinkr_pravy1" node="0>2|3|1|0"/>
+        <i3dMapping id="svedlo_blinkr_pravy2" node="0>2|3|1|1"/>
+        <i3dMapping id="blinkry_3D_leve1" node="0>2|6|0|1"/>
+        <i3dMapping id="blinkry_3D_leve2" node="0>2|6|2|1"/>
+        <i3dMapping id="blinkry_3D_prave1" node="0>2|6|1|1"/>
+        <i3dMapping id="blinkry_3D_prave2" node="0>2|6|3|1"/>
+        <i3dMapping id="majak1" node="0>2|5|0"/>
+        <i3dMapping id="majak2" node="0>2|5|1"/>
+        <i3dMapping id="svetlo_low1" node="0>2|0|0"/>
+        <i3dMapping id="svetlo_low2" node="0>2|1|0|0"/>
+        <i3dMapping id="svetlo_low3" node="0>2|1|1|2"/>
+        <i3dMapping id="svetlo_low4" node="0>2|0|1"/>
+        <i3dMapping id="svetlo_high1" node="0>2|0|2"/>
+        <i3dMapping id="svetlo_high2" node="0>2|1|0|1"/>
+        <i3dMapping id="svetlo_high3" node="0>2|1|1|0"/>
+        <i3dMapping id="svetlo_high4" node="0>2|0|3"/>
+        <i3dMapping id="svetlo_high5" node="0>2|2|0"/>
+        <i3dMapping id="svetlopod1" node="0>2|0|4|2"/>
+        <i3dMapping id="svetlopod2" node="0>2|0|4|3"/>
+        <i3dMapping id="svetlodal1" node="0>2|0|4|0"/>
+        <i3dMapping id="svetlodal2" node="0>2|0|4|1"/>
+        <i3dMapping id="svetlodal3" node="0>2|0|4|4"/>
+        <i3dMapping id="svetlodal4" node="0>2|0|4|5"/>
+        <i3dMapping id="svetlo_3D_2" node="0>2|6|0|0"/>
+        <i3dMapping id="svetlo_3D_3" node="0>2|6|1|0"/>
+        <i3dMapping id="svetlo_3D_4" node="0>2|6|2|0"/>
+        <i3dMapping id="svetlo_3D_5" node="0>2|6|3|0"/>
+        <i3dMapping id="svetlo_3D_6" node="0>2|1|0|2"/>
+        <i3dMapping id="svetlo_3D_7" node="0>2|1|1|1"/>
+        <i3dMapping id="ovladac" node="0>13|0|8|0"/>
+        <i3dMapping id="panel1" node="0>13|0|8|0|9|0"/>
+        <i3dMapping id="panel2" node="0>13|0|8|0|10|0"/>
+        <i3dMapping id="panel3" node="0>13|0|8|0|11|0"/>
+        <i3dMapping id="panel4" node="0>13|0|8|0|14"/>
+    </i3dMappings>
+    <!--Non converted elements, might require manual conversion or are obsolete:
+
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle>
+    <attacherJoints>
+        <attacherJoint upperRotRotationOffset="0">
+            <transNode node="zadni_pripojeni_vleku" minY="0.555" maxY="1.023"/>
+        </attacherJoint>
+        <attacherJoint upperRotRotationOffset="0">
+            <steeringBars leftNode="pripojeni_spodni_koule_leva" rightNode="pripojeni_spodni_koule_prava"/>
+            <transNode node="zadni_spodni_pripojeni_vleku" minY="0.4" maxY="0.7"/>
+        </attacherJoint>
+        <attacherJointConfigurations>
+            <attacherJointConfiguration>
+                <attacherJoint upperRotRotationOffset="0"/>
+                <objectChange node="drzak_strhavace" visibilityActive="false"/>
+                <objectChange node="ovladac" visibilityActive="false"/>
+            </attacherJointConfiguration>
+        </attacherJointConfigurations>
+    </attacherJoints>
+
+    <motorized>
+        <motorConfigurations>
+            <motorConfiguration>
+                <objectChange node="detail" visibilityActive="true"/>
+                <objectChange node="detail1" visibilityActive="false"/>
+                <objectChange node="detail2" visibilityActive="false"/>
+            </motorConfiguration>
+            <motorConfiguration>
+                <objectChange node="detail" visibilityActive="false"/>
+                <objectChange node="detail1" visibilityActive="true"/>
+                <objectChange node="detail2" visibilityActive="false"/>
+            </motorConfiguration>
+            <motorConfiguration>
+                <objectChange node="detail" visibilityActive="false"/>
+                <objectChange node="detail1" visibilityActive="false"/>
+                <objectChange node="detail2" visibilityActive="true"/>
+            </motorConfiguration>
+        </motorConfigurations>
+    </motorized>
+
+    <dashboard>
+        <groups>
+            <group name="MOTOR_ACTIVE" isMotorStarting="true" isMotorRunning="true"/>
+        </groups>
+        <default>
+            <dashboard displayType="EMITTER" node="panel1" idleValue="-1" intensity="0.3" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" node="panel2" idleValue="-1" intensity="0.3" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" node="panel3" idleValue="-1" intensity="0.3" groups="MOTOR_ACTIVE"/>
+        </default>
+    </dashboard>
+
+    <simpleIC outsideInteractionTrigger="trigerakc">
+        <animation animationName="leftdoor" animationSpeed="1" sharedAnimation="false" soundVolumeIncreasePercentage="0.5">
+            <insideTrigger triggerPoint="tlacinl" triggerPointSize="0.04"/>
+            <outsideTrigger triggerPoint="tlacuotl" triggerPointSize="0.04"/>
+        </animation>
+        <animation animationName="rightdoor" animationSpeed="1" sharedAnimation="false" soundVolumeIncreasePercentage="0.5">
+            <insideTrigger triggerPoint="tlacinp" triggerPointSize="0.04"/>
+            <outsideTrigger triggerPoint="tlacuotp" triggerPointSize="0.04"/>
+        </animation>
+        <animation animationName="backleftwindow" animationSpeed="1" sharedAnimation="false" soundVolumeIncreasePercentage="0.5">
+            <insideTrigger triggerPoint="backleftwin" triggerPointSize="0.04"/>
+        </animation>
+        <animation animationName="backrightwindow" animationSpeed="1" sharedAnimation="false" soundVolumeIncreasePercentage="0.5">
+            <insideTrigger triggerPoint="backrightwin" triggerPointSize="0.04"/>
+        </animation>
+        <animation animationName="window" animationSpeed="1" sharedAnimation="false" soundVolumeIncreasePercentage="0.5">
+            <insideTrigger triggerPoint="backwin" triggerPointSize="0.04"/>
+        </animation>
+    </simpleIC>
+
+    <frontloaderConfigurations>
+        <frontloaderConfiguration icon="$dataS2/menu/hud/configurations/config_loader.png">
+            <attacherJoint node="ramcel" jointType="attachableFrontloader" lowerRotLimit="0 0 0" lowerTransLimit="0 0 0" moveTime="2">
+                <rotationNode upperRotation="0 0 0" lowerRotation="0 0 0"/>
+                <schema position="1 0.4" rotation="0" invertX="true"/>
+            </attacherJoint>
+        </frontloaderConfiguration>
+    </frontloaderConfigurations>
+</vehicle>
+-->
+</vehicle>

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="trailer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Hop vine lift</name>
+        <functions>
+            <function>$l10n_function_mv1073</function>
+        </functions>
+        <image>store/store_MV1_073.png</image>
+        <price>18860</price>
+        <lifetime>900</lifetime>
+        <rotation>0</rotation>
+        <brand>Lizard</brand>
+        <category>trailers</category>
+        <shopTranslationOffset>0 0 0</shopTranslationOffset>
+        <shopRotationOffset>0 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>709068</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>118254</indexBufferMemoryUsage>
+        <textureMemoryUsage>3277352</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_tipper</typeDesc>
+        <filename>vehicles/mv1_073novy.i3d</filename>
+        <size width="2.0" length="7.3" lengthOffset="1"/>
+        <components>
+            <component centerOfMass="0 0.8 1" solverIterationCount="10" mass="1800"/>
+        </components>
+        <schemaOverlay name="IMPLEMENT" attacherJointPosition="0 0"/>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/lizard/implement/385_65R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="1.0" repr="kolo" forcePointRatio="0.5" initialCompression="10" suspTravel="0.09" spring="60" damper="50"/>
+                        <tire isInverted="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/lizard/implement/385_65R22_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="1.0" repr="kolo1" forcePointRatio="0.5" initialCompression="10" suspTravel="0.09" spring="60" damper="50"/>
+                        <tire isInverted="true"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+        <hubs>
+            <color0>0.0152 0.0152 0.0152 1</color0>
+            <color1>0.0152 0.0152 0.0152 1</color1>
+            <hub linkNode="nabojl" filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="true" scale="0.335 0.335 0.335"/>
+            <hub linkNode="nabojp" filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="false" scale="0.335 0.335 0.335"/>
+        </hubs>
+        <ackermannSteeringConfigurations>
+            <ackermannSteering rotSpeed="24" rotMax="35" rotCenter="0 2.379"/>
+        </ackermannSteeringConfigurations>
+    </wheels>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="1|0" linkNode="0>0|0|10|1|0|0" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="0>0|0|10|2|0|0" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="0>0|0|10|3|0|0" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="0>0|0|10|4|0|0" filename="$data/shared/connectionHoses/connectors.i3d"/>
+    </dynamicallyLoadedParts>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="spoj" jointType="trailer" attacherHeight="1.049"/>
+        </inputAttacherJoints>
+        <support animationName="moveSupport" delayedOnAttach="false"/>
+    </attachable>
+
+    <connectionHoses>
+        <hose diameter="0.008" inputAttacherJointIndices="1" length="2.9" node="elec" straighteningFactor="1.5" type="electric">
+            <objectChange node="elec1" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose diameter="0.015" inputAttacherJointIndices="1" length="1.5" node="hydra" straighteningFactor="1.5" type="hydraulicIn">
+            <objectChange node="hydra1" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose diameter="0.015" inputAttacherJointIndices="1" length="1.5" node="hydra2" straighteningFactor="1.5" type="hydraulicOut">
+            <objectChange node="hydra21" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose diameter="0.015" inputAttacherJointIndices="1" length="1.5" node="hydra3" straighteningFactor="1.5" type="hydraulicIn">
+            <objectChange node="hydra31" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose diameter="0.015" inputAttacherJointIndices="1" length="1.5" node="hydra4" straighteningFactor="1.5" type="hydraulicOut">
+            <objectChange node="hydra41" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon" type="hydraulicIn"/>
+            <target node="hydracon1" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon2" type="hydraulicIn"/>
+            <target node="hydracon3" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon4" type="hydraulicIn"/>
+            <target node="hydracon5" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon6" type="hydraulicIn"/>
+            <target node="hydracon7" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon8" type="hydraulicIn"/>
+            <target node="hydracon9" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="2.5" node="hydracon10" type="hydraulicIn"/>
+            <target node="hydracon11" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon12" type="hydraulicIn"/>
+            <target node="hydracon13" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="2.5" node="hydracon14" type="hydraulicIn"/>
+            <target node="hydracon15" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon16" type="hydraulicIn"/>
+            <target node="hydracon17" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon18" type="hydraulicIn"/>
+            <target node="hydracon19" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon20" type="hydraulicIn"/>
+            <target node="hydracon21" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon22" type="hydraulicIn"/>
+            <target node="hydracon23" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="2" node="hydracon24" type="hydraulicIn"/>
+            <target node="hydracon25" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon26" type="hydraulicIn"/>
+            <target node="hydracon27" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon28" type="hydraulicIn"/>
+            <target node="hydracon29" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon30" type="hydraulicIn"/>
+            <target node="hydracon31" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon32" type="hydraulicIn"/>
+            <target node="hydracon33" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon34" type="hydraulicIn"/>
+            <target node="hydracon35" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.02" isTwoPointHose="true" length="1.5" node="hydracon36" type="hydraulicIn"/>
+            <target node="hydracon37" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.01" isTwoPointHose="true" length="1" node="hydracon38" type="hydraulicIn"/>
+            <target node="hydracon39" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.01" isTwoPointHose="true" length="1" node="hydracon40" type="hydraulicIn"/>
+            <target node="hydracon41" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.01" isTwoPointHose="true" length="1.5" node="hydracon42" type="hydraulicIn"/>
+            <target node="hydracon43" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.01" isTwoPointHose="true" length="1.5" node="hydracon44" type="hydraulicIn"/>
+            <target node="hydracon47" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.01" isTwoPointHose="true" length="1" node="hydracon46" type="hydraulicIn"/>
+            <target node="hydracon49" type="none"/>
+        </localHose>
+        <localHose>
+            <hose diameter="0.01" isTwoPointHose="true" length="1" node="hydracon48" type="hydraulicIn"/>
+            <target node="hydracon45" type="none"/>
+        </localHose>
+    </connectionHoses>
+
+    <powerConsumer ptoRpm="450" neededMaxPtoPower="10"/>
+    <lights>
+        <realLights>
+            <high>
+                <light node="backLightsHigh" lightTypes="0"/>
+                <turnLightLeft node="turnLightLeftBack"/>
+                <turnLightRight node="turnLightRightBack"/>
+                <brakeLight node="backLightsHigh"/>
+            </high>
+        </realLights>
+        <defaultLights>
+            <defaultLight shaderNode="rearLightCirclel" lightTypes="0"/>
+            <defaultLight shaderNode="rearLightCirclep" lightTypes="0"/>
+        </defaultLights>
+        <sharedLight linkNode="rear3ChamberLightL" filename="$data/shared/assets/lights/lizard/rear3ChamberLight_01_left.xml"/>
+        <sharedLight linkNode="rear3ChamberLightR" filename="$data/shared/assets/lights/lizard/rear3ChamberLight_01_right.xml"/>
+    </lights>
+
+    <animations>
+        <animation name="folding">
+            <part endRot="0 0 -41" endTime="2" node="wall_left" startRot="0 0 0" startTime="0"/>
+            <part endRot="0 0 55" endTime="2" node="wall_right" startRot="0 0 0" startTime="0"/>
+            <part endRot="0 -4 0" endTime="2" node="tocna" startRot="0 0 0" startTime="0"/>
+            <part endRot="0 4 0" endTime="2" node="oko" startRot="0 0 0" startTime="0"/>
+        </animation>
+        <animation name="moveSupport">
+            <part endRot="0 0 0" endTime="0.3" endTrans="-0.008 -0.677 -0.006" node="supportFeet" startTime="0" startTrans="-0.008 -0.424 -0.006"/>
+            <part endRot="0 0 0" endTime="0.3" node="supportCrank" startRot="0 720 0" startTime="0"/>
+            <part endTime="0.9" node="supportbreak" startRot="0 0 720" startTime="0"/>
+        </animation>
+        <animation name="hopsAnimation">
+            <part endTime="0.023" node="Hopfen1" startTime="0.000" visibility="false"/>
+            <part endTime="1.000" node="Hopfen1" startTime="0.024" visibility="true"/>
+            <part endTime="0.099" node="Hopfen2" startTime="0.000" visibility="false"/>
+            <part endTime="1.000" node="Hopfen2" startTime="0.100" visibility="true"/>
+            <part endTime="0.199" node="Hopfen3" startTime="0.000" visibility="false"/>
+            <part endTime="1.000" node="Hopfen3" startTime="0.200" visibility="true"/>
+            <part endTime="0.299" node="Hopfen4" startTime="0.000" visibility="false"/>
+            <part endTime="1.000" node="Hopfen4" startTime="0.300" visibility="true"/>
+            <part endTime="0.360" node="Hopfen5" startTime="0.000" visibility="false"/>
+            <part endTime="1.000" node="Hopfen5" startTime="0.361" visibility="true"/>
+            <part endTime="0.399" node="Hopfen6" startTime="0.000" visibility="false"/>
+            <part endTime="1.000" node="Hopfen6" startTime="0.400" visibility="true"/>
+            <part endTime="0.449" node="Hopfen7" startTime="0.000" visibility="false"/>
+            <part endTime="1.000" node="Hopfen7" startTime="0.450" visibility="true"/>
+            <part endTime="0.499" node="Hopfen8" startTime="0.000" visibility="false"/>
+            <part endTime="1.000" node="Hopfen8" startTime="0.500" visibility="true"/>
+        </animation>
+        <animation name="tipAnimationBack">
+            <part endRot="0 0 0" endTime="1.499" endTrans="0 -0.290 -5.68" node="moveback" startTime="0.9" startTrans="0 -0.297 0"/>
+            <part endRot="0 0 0" endTime="1.51" endTrans="0 -1.667 -5.68" node="moveback" startTime="1.5" startTrans="0 -0.297 0"/>
+            <part endRot="0 0 -31" endTime="1.5" node="chains" shaderEndValues="0.5 0 0 0" shaderParameter="offsetUV" shaderStartValues="0 0 0 0" startTime="0.9"/>
+            <part endRot="0 0 31" endTime="1.5" node="gearDecals" startRot="1400 0 0" startTime="0.9"/>
+            <part endTime="1.5" node="gearDecals1" startRot="1400 0 0" startTime="0.9"/>
+            <part endTime="1" node="wall_left" startRot="0 0 0" startTime="0"/>
+            <part endTime="1" node="wall_right" startRot="0 0 0" startTime="0"/>
+        </animation>
+    </animations>
+
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts>
+                    <foldingPart animationName="folding" speedScale="1"/>
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <cylindered>
+        <movingParts>
+            <movingPart invertZ="true" isActiveDirty="true" node="pist" referenceFrame="pist" referencePoint="bod" scaleZ="true">
+                <translatingPart node="oko"/>
+            </movingPart>
+            <movingPart invertZ="true" isActiveDirty="true" node="pist1" referenceFrame="pist1" referencePoint="bod1" scaleZ="true">
+                <translatingPart node="oko1"/>
+            </movingPart>
+            <movingPart invertZ="true" isActiveDirty="true" node="pist2" referenceFrame="pist2" referencePoint="bod2" scaleZ="true">
+                <translatingPart node="oko2"/>
+            </movingPart>
+            <movingPart invertZ="true" isActiveDirty="true" node="pist3" referenceFrame="pist3" referencePoint="bod3" scaleZ="true">
+                <translatingPart node="oko3"/>
+            </movingPart>
+            <movingPart invertZ="true" isActiveDirty="true" node="pist4" referenceFrame="pist4" referencePoint="bod4" scaleZ="true">
+                <translatingPart node="oko4"/>
+            </movingPart>
+            <movingPart invertZ="true" isActiveDirty="true" node="pist5" referenceFrame="pist5" referencePoint="bod5" scaleZ="true">
+                <translatingPart node="oko5"/>
+            </movingPart>
+        </movingParts>
+    </cylindered>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit capacity="26000" fillTypes="CHMEL" unitTextOverride="$l10n_unit_literShort">
+                        <exactFillRootNode node="exactFillRootNode"/>
+                        <dashboard valueType="fillLevel" displayType="ANIMATION" animName="hopsAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <dischargeable>
+        <dischargeNode node="dischargeNodeBack" canDischargeToGround="false" emptySpeed="1800" fillUnitIndex="1">
+            <info length="0.5" width="2.0"/>
+        </dischargeNode>
+    </dischargeable>
+
+    <trailer>
+        <trailerConfigurations>
+            <trailerConfiguration>
+                <trailer>
+                    <tipSide name="$l10n_info_tipSideBack" dischargeNodeIndex="1">
+                        <animation name="tipAnimationBack" speedScale="0.1" startTipTime="1"/>
+                    </tipSide>
+                </trailer>
+            </trailerConfiguration>
+        </trailerConfigurations>
+    </trailer>
+
+    <foliageBending>
+        <bendingNode minX="-1.3" maxX="1.3" minZ="-2.4" maxZ="3.8" yOffset="0.6"/>
+    </foliageBending>
+
+    <designMaterialConfigurations price="500" useDefaultColors="false" defaultColorIndex="0">
+        <designMaterialConfiguration color="0.0265 0.1332 0.0415 0" name="ZETOR GREEN"/>
+        <designMaterialConfiguration color="0.0000 0.1166 0.4098 0" name="ZETOR BLUE"/>
+        <designMaterialConfiguration color="0.5860 0.0000 0.0000 0" name="ZETOR RED"/>
+        <designMaterialConfiguration color="0.8355 0.7155 0.0963 0" name="ZETOR YELLOW"/>
+        <designMaterialConfiguration color="0.8832 0.1636 0.0046 1" name="ZETOR ORANGE"/>
+        <material name="kridloL" shaderParameter="colorMat0"/>
+        <material name="kridloP" shaderParameter="colorMat0"/>
+    </designMaterialConfigurations>
+
+    <baseMaterial>
+        <material name="korba" baseNode="barva">
+            <shaderParameter name="colorMat1" value="1.00 0 0 0"/>
+        </material>
+        <material name="tocna" baseNode="barva1">
+            <shaderParameter name="colorMat0" value="1.00 0 0 0"/>
+        </material>
+        <material name="kridloL" baseNode="barva2">
+            <shaderParameter name="colorMat0" value="1.00 0 0 0"/>
+        </material>
+        <material name="kridloP" baseNode="barva4">
+            <shaderParameter name="colorMat0" value="1.00 0 0 0"/>
+        </material>
+    </baseMaterial>
+
+    <baseMaterialConfigurations defaultColorIndex="0" price="500" useDefaultColors="false">
+        <baseMaterialConfiguration color="0.5860 0.0000 0.0000 0" name="ZETOR RED">
+            <material name="korba" shaderParameter="colorMat1"/>
+        </baseMaterialConfiguration>
+        <baseMaterialConfiguration color="0.0000 0.1166 0.4098 0" name="ZETOR BLUE">
+            <material name="tocna" shaderParameter="colorMat0"/>
+        </baseMaterialConfiguration>
+        <baseMaterialConfiguration color="0.8355 0.7155 0.0963 0" name="ZETOR YELLOW"/>
+        <baseMaterialConfiguration color="0.0265 0.1332 0.0415 0" name="ZETOR GREEN"/>
+        <baseMaterialConfiguration color="0.8832 0.1636 0.0046 1" name="ZETOR ORANGE"/>
+    </baseMaterialConfigurations>
+
+    <wearable wearDuration="1080" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+    <i3dMappings>
+        <i3dMapping id="wall_left" node="0>0|0|1"/>
+        <i3dMapping id="wall_right" node="0>0|0|2"/>
+        <i3dMapping id="tocna" node="0>0|0|0"/>
+        <i3dMapping id="supportFeet" node="0>0|0|3|1"/>
+        <i3dMapping id="supportCrank" node="0>0|0|3|0"/>
+        <i3dMapping id="supportbreak" node="0>0|0|3|2"/>
+        <i3dMapping id="Hopfen1" node="0>0|0|7|0|0"/>
+        <i3dMapping id="Hopfen2" node="0>0|0|7|0|1"/>
+        <i3dMapping id="Hopfen3" node="0>0|0|7|0|2"/>
+        <i3dMapping id="Hopfen4" node="0>0|0|7|0|3"/>
+        <i3dMapping id="Hopfen5" node="0>0|0|7|0|4"/>
+        <i3dMapping id="Hopfen6" node="0>0|0|7|0|5"/>
+        <i3dMapping id="Hopfen7" node="0>0|0|7|0|6"/>
+        <i3dMapping id="Hopfen8" node="0>0|0|7|0|7"/>
+        <i3dMapping id="dischargeNodeBack" node="0>0|0|6"/>
+        <i3dMapping id="exactFillRootNode" node="0>0|0|7|1"/>
+        <i3dMapping id="oko" node="0>0"/>
+        <i3dMapping id="rearLightCirclel" node="0>0|0|8|2"/>
+        <i3dMapping id="rearLightCirclep" node="0>0|0|8|3"/>
+        <i3dMapping id="rear3ChamberLightL" node="0>0|0|8|0"/>
+        <i3dMapping id="rear3ChamberLightR" node="0>0|0|8|1"/>
+        <i3dMapping id="spoj" node="0>0|0|5"/>
+        <i3dMapping id="barva" node="0>0|0"/>
+        <i3dMapping id="barva1" node="0>0|0|0"/>
+        <i3dMapping id="barva2" node="0>0|0|1|2"/>
+        <i3dMapping id="barva3" node="0>0|0|1|2|0"/>
+        <i3dMapping id="barva4" node="0>0|0|2|2"/>
+        <i3dMapping id="nabojl" node="0>0|0|0|0|0"/>
+        <i3dMapping id="nabojp" node="0>0|0|0|1|0"/>
+        <i3dMapping id="kolecko" node="0>0|0|3|1|0"/>
+        <i3dMapping id="el1" node="0>0|0|10|0|0"/>
+        <i3dMapping id="hydin" node="0>0|0|10|1"/>
+        <i3dMapping id="hydout" node="0>0|0|10|2"/>
+        <i3dMapping id="hydin1" node="0>0|0|10|3"/>
+        <i3dMapping id="hydout1" node="0>0|0|10|4"/>
+        <i3dMapping id="el2" node="0>0|0|10|0|1"/>
+        <i3dMapping id="hydin2" node="0>0|0|10|1|0"/>
+        <i3dMapping id="hydout2" node="0>0|0|10|2|0"/>
+        <i3dMapping id="hydin11" node="0>0|0|10|3|0"/>
+        <i3dMapping id="hydout11" node="0>0|0|10|4|0"/>
+        <i3dMapping id="moveback" node="0>0|0|7"/>
+        <i3dMapping id="gearDecals" node="0>0|0|4|0"/>
+        <i3dMapping id="gearDecals1" node="0>0|0|4|1"/>
+        <i3dMapping id="chains" node="0>0|0|9"/>
+        <i3dMapping id="kolo" node="0>0|0|0|0"/>
+        <i3dMapping id="kolo1" node="0>0|0|0|1"/>
+        <i3dMapping id="pist" node="0>0|0|4|6"/>
+        <i3dMapping id="pist1" node="0>0|0|4|7"/>
+        <i3dMapping id="pist2" node="0>0|0|4|8"/>
+        <i3dMapping id="pist3" node="0>0|0|4|9"/>
+        <i3dMapping id="pist4" node="0>0|0|4|4"/>
+        <i3dMapping id="pist5" node="0>0|0|4|5"/>
+        <i3dMapping id="bod" node="0>0|0|2|1"/>
+        <i3dMapping id="bod1" node="0>0|0|2|0"/>
+        <i3dMapping id="bod2" node="0>0|0|0|2"/>
+        <i3dMapping id="bod3" node="0>0|0|2|3"/>
+        <i3dMapping id="bod4" node="0>0|0|1|1"/>
+        <i3dMapping id="bod5" node="0>0|0|1|0"/>
+        <i3dMapping id="oko" node="0>0|0|4|6|1"/>
+        <i3dMapping id="oko1" node="0>0|0|4|7|1"/>
+        <i3dMapping id="oko2" node="0>0|0|4|8|1"/>
+        <i3dMapping id="oko3" node="0>0|0|4|9|1"/>
+        <i3dMapping id="oko4" node="0>0|0|4|4|1"/>
+        <i3dMapping id="oko5" node="0>0|0|4|5|1"/>
+        <i3dMapping id="elec" node="0>0|0|10|0|1"/>
+        <i3dMapping id="elec1" node="0>0|0|10|0|0"/>
+        <i3dMapping id="hydra" node="0>0|0|10|1"/>
+        <i3dMapping id="hydra1" node="0>0|0|10|1|0"/>
+        <i3dMapping id="hydra2" node="0>0|0|10|2"/>
+        <i3dMapping id="hydra21" node="0>0|0|10|2|0"/>
+        <i3dMapping id="hydra3" node="0>0|0|10|3"/>
+        <i3dMapping id="hydra31" node="0>0|0|10|3|0"/>
+        <i3dMapping id="hydra4" node="0>0|0|10|4"/>
+        <i3dMapping id="hydra41" node="0>0|0|10|4|0"/>
+        <i3dMapping id="hydracon" node="0>0|0|4|15|0|0"/>
+        <i3dMapping id="hydracon1" node="0>0|0|10|5"/>
+        <i3dMapping id="hydracon2" node="0>0|0|4|15|1|0"/>
+        <i3dMapping id="hydracon3" node="0>0|0|10|6"/>
+        <i3dMapping id="hydracon4" node="0>0|0|4|15|2|0"/>
+        <i3dMapping id="hydracon5" node="0>0|0|10|7"/>
+        <i3dMapping id="hydracon6" node="0>0|0|4|15|3|0"/>
+        <i3dMapping id="hydracon7" node="0>0|0|10|8"/>
+        <i3dMapping id="hydracon8" node="0>0|0|4|7|2|0"/>
+        <i3dMapping id="hydracon9" node="0>0|0|11|0"/>
+        <i3dMapping id="hydracon10" node="0>0|0|4|15|4|0"/>
+        <i3dMapping id="hydracon11" node="0>0|0|11|0|0"/>
+        <i3dMapping id="hydracon12" node="0>0|0|4|9|2|0"/>
+        <i3dMapping id="hydracon13" node="0>0|0|11|1"/>
+        <i3dMapping id="hydracon14" node="0>0|0|4|15|5|0"/>
+        <i3dMapping id="hydracon15" node="0>0|0|11|1|0"/>
+        <i3dMapping id="hydracon16" node="0>0|0|4|15|6|0"/>
+        <i3dMapping id="hydracon17" node="0>0|0|11|3|1"/>
+        <i3dMapping id="hydracon18" node="0>0|0|11|3|0"/>
+        <i3dMapping id="hydracon19" node="0>0|0|11|2"/>
+        <i3dMapping id="hydracon20" node="0>0|0|4|6|2|0"/>
+        <i3dMapping id="hydracon21" node="0>0|0|11|2|0"/>
+        <i3dMapping id="hydracon22" node="0>0|0|4|5|2|0"/>
+        <i3dMapping id="hydracon23" node="0>0|0|11|4|0"/>
+        <i3dMapping id="hydracon24" node="0>0|0|11|4|1"/>
+        <i3dMapping id="hydracon25" node="0>0|0|11|5|0"/>
+        <i3dMapping id="hydracon26" node="0>0|0|11|5|1"/>
+        <i3dMapping id="hydracon27" node="0>0|0|4|15|7|0"/>
+        <i3dMapping id="hydracon28" node="0>0|0|4|4|2|0"/>
+        <i3dMapping id="hydracon29" node="0>0|0|11|6|0"/>
+        <i3dMapping id="hydracon30" node="0>0|0|11|6|1"/>
+        <i3dMapping id="hydracon31" node="0>0|0|4|15|8|0"/>
+        <i3dMapping id="hydracon32" node="0>0|0|4|15|9|0"/>
+        <i3dMapping id="hydracon33" node="0>0|0|4|8|2|0"/>
+        <i3dMapping id="hydracon34" node="0>0|0|4|15|10|0"/>
+        <i3dMapping id="hydracon35" node="0>0|0|11|7|0"/>
+        <i3dMapping id="hydracon36" node="0>0|0|12|0"/>
+        <i3dMapping id="hydracon37" node="0>0|0|11|7|1"/>
+        <i3dMapping id="hydracon38" node="0>0|0|10|0|2"/>
+        <i3dMapping id="hydracon39" node="0>0|0|11|11|0"/>
+        <i3dMapping id="hydracon40" node="0>0|0|11|11|1"/>
+        <i3dMapping id="hydracon41" node="0>0|0|11|8|0"/>
+        <i3dMapping id="hydracon42" node="0>0|0|11|8|0"/>
+        <i3dMapping id="hydracon43" node="0>0|0|11|9|0"/>
+        <i3dMapping id="hydracon44" node="0>0|0|11|9|1"/>
+        <i3dMapping id="hydracon45" node="0>0|0|10|0|3"/>
+        <i3dMapping id="hydracon46" node="0>0|0|11|10|0"/>
+        <i3dMapping id="hydracon47" node="0>0|0|11|12|0"/>
+        <i3dMapping id="hydracon48" node="0>0|0|11|12|1"/>
+        <i3dMapping id="hydracon49" node="0>0|0|11|10|1"/>
+        <i3dMapping id="backLightsHigh" node="0>0|0|8|4|0"/>
+        <i3dMapping id="turnLightLeftBack" node="0>0|0|8|4|1"/>
+        <i3dMapping id="turnLightRightBack" node="0>0|0|8|4|2"/>
+    </i3dMappings>
+    <!--Non converted elements, might require manual conversion or are obsolete:
+
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle>
+    <base>
+        <components count="1"/>
+    </base>
+
+    <realDirtColor useSimpleMode="true"/>
+    <attachable>
+        <brakeForce>1.05</brakeForce>
+    </attachable>
+</vehicle>
+-->
+</vehicle>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="61">
+    <author>TedakCZ3</author>
+
+    <version>2.0.2.2</version>
+
+    <title>
+        <en>Hops Equipment</en>
+        <de>Hopfenausrüstung</de>
+        <cz>Chmelové Vybavení</cz>
+    </title>
+
+    <description>
+        <en><![CDATA[More than 30 years of development in the field of SOLLER hop technology for the benefit of hop growers. Specially developed machines for growing hops are sold
+Worldwide.
+The ripper is designed to catch, cut and pull down the hop vine, which then falls on the hop semi-trailer.
+Used in combination with a self-emptying semi-trailer for the collection of hop vines with movable hydraulically
+adjustable side panels. The semi-trailer is designed for the removal of hop vines from tall hop gardens to the combing machine.
+It is equipped with a hydraulically rotated axle, independently tilting sides and a floor conveyor with a hydraulic drive.
+ The aggregation means of the set is a tractor with an output of at least 46 kW.
+
+Hop removal machine
+Price: 35.400 €
+Fits Zetor Forterra, NH T6
+
+Hop vine lift
+Price: 18.860 €
+Capacity 26.000
+Color configuration
+
+Zetor Forterra HD
+Price: 93.000 €
+Max. speed 40 km/h
+Configuration:
+front loader,
+engine 130, 140, 150,
+wheel color configuration;
+color configuration,
+weight
+involvement of hop technology
+Simple IC
+
+Changelog 1.1.0.0:
+Fixed some parts on Forterre
+
+NH T6 Series machine added
+Price: 102.000 €
+Max. speed 50 km/h
+Configuration:
+front loader,
+engine 125, 155, 175,
+wheel color configuration;
+color configuration,
+involvement of hop technology
+
+Need:
+JZDVidhosticeMapCz
+
+This mod is necessary for the harvest of hops on the map of the farm JZD VidhosticeMapCZ]]></en>
+        <de><![CDATA[Über 30 Jahre Entwicklung im Bereich der SOLLER Hopfentechnologie zum Wohle der Hopfenbauern. Speziell entwickelte Maschinen für den Hopfenanbau werden verkauft
+Weltweit.
+Mit dem Aufreißer wird die Hopfenrebe aufgefangen, geschnitten und gezogen, die dann auf den Hopfenauflieger fällt.
+Es wird in Kombination mit einem selbstschließenden Sattelauflieger zum Sammeln von Hopfenweinbergen mit beweglicher Hydraulik, einschließlich verstellbarer Bordwände, verwendet. Der Auflieger wurde entwickelt, um auf einer tschechischen Maschine Hopfenreben aus hohen Hopfengärten zu entfernen.
+Es ist mit einer hydraulisch drehbaren Achse, hergestellt mit kippbaren Seiten und einem Kratzboden mit hydraulischem Antrieb ausgestattet.
+Das Aggregationsmittel des Sets ist ein Traktor mit einer Leistung von mehreren 46 kW.
+
+Rebenabreißgerät
+Preis: 35.400 €
+Passend für Zetor Forterra, NH T6
+
+Hopfenrebenlift
+Preis: 18.860 €
+Fassungsvermögen 26.000 l Farbe
+Design
+
+Zetor Forterra HD
+Preis: 93.000 €
+max. Geschwindigkeit: 40 km/h
+Konstruktion:
+Frontlader,
+Motor 130, 140, 150,
+Radfarbkonfiguration;
+Farbkonfiguration,
+Masse
+Beteiligung der Hopfentechnologie
+SimpleIC-Unterstützung
+
+Changelog 1.1.0.0:
+Einige Fehler auf Forterre behoben
+
+Maschine der NH T6 Serie 
+Preis: 102.000 €
+max. Geschwindigkeit 50 km/h
+Aufbau:
+Frontlader,
+Motor 125, 155, 175,
+Radfarbkonfiguration;
+Farbkonfiguration,
+Beteiligung der Hopfentechnologie
+
+Benötigte Mods:
+JZDVidhosticeMapCz
+
+Dieser Mod ist notwendig für die Hopfenernte auf der Karte des Hofes JZD VidhosticeMapCZ]]></de>
+        <cz><![CDATA[Více než 30 let vývoje v oblasti chmelové technologie SOLLER ve prospěch pěstitelů chmele. Speciálně vyvinuté stroje pro pěstování chmele se prodávají 
+po celém světě.
+Strhávač je konstruován k zachycení, odříznutí a strhnutí chmelové révy, která dále padá na chmelový návěs.
+Používá se v kombinaci se samovyprazdňovacím návěsem pro svoz chmelových rév s pohyblivými hydraulicky
+stavitelnými bočnicemi. Návěs je určen pro odvoz chmelových rév z vysokých chmelnic k česacímu stroji.
+Je vybaven hydraulicky natáčenou nápravou, nezávisle sklopnými bočnicemi a podlahovým dopravníkem s hydropohonem.
+Agregačním prostředkem soupravy je traktor o výkonu min.46 kW.
+
+Strhávač chmelové révy
+Price 35.400 €
+Pasuje na Zetor Forterra, NH T6
+
+Vlek na chmelovou révu
+Cena 18.860
+Kapacita 26.000 €
+Konfigurace barvy
+
+Zetor Forterra HD
+Cena: 93.000 €
+Max. rychlost 40 km/h
+Konfigurace:
+čelní nakladač,
+motor 130, 140, 150,
+konfigurace barvy kol;
+konfigurace barvy,
+závaží
+zapojení chmelové techniky
+Simple IC
+
+Seznam změn 1.1.0.0:
+Oprava některých částí na Forterre
+
+Přidán stroj NH T6 Series
+Cena: 102000 €
+Max. rychlost 50 km/h
+Konfigurace:
+čelní nakladač,
+motor 125, 155, 175,
+konfigurace barvy kol;
+konfigurace barvy,
+zapojení chmelové techniky
+
+Potřeba:
+JZDVidhosticeMapCz
+
+Tento mod je nezbytný pro sklizeň chmele na mapě farmy JZD VidhosticeMapCZ]]></cz>
+    </description>
+
+    <iconFilename>store/chmelpak.dds</iconFilename>
+
+    <multiplayer supported="true"/>
+    <storeItems>
+        <storeItem xmlFilename="strhavac.xml"/>
+        <storeItem xmlFilename="mv1_073novy.xml"/>
+        <storeItem xmlFilename="zetorForterra.xml"/>
+        <storeItem xmlFilename="T6.xml"/>
+    </storeItems>
+
+    <vehicleTypes>
+        <type name="hopsCutter" parent="baseFillable" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="ikChains"/>
+            <specialization name="turnOnVehicle"/>
+            <specialization name="dischargeable"/>
+            <specialization name="groundReference"/>
+            <specialization name="workArea"/>
+            <specialization name="workParticles"/>
+            <specialization name="combine"/>
+            <specialization name="cutter"/>
+            <specialization name="bunkerSiloCompacter"/>
+        </type>
+    </vehicleTypes>
+
+    <l10n>
+        <text name="function_hopsstrhavac">
+            <en>Hop Cutter</en>
+            <de>Hopfenschneider</de>
+            <cz>Strhávač Chmele</cz>
+        </text>
+        <text name="typeDesc_hopsstrhavac">
+            <en>Cutter</en>
+            <de>Cutter</de>
+            <cz>Strhávač</cz>
+        </text>
+        <text name="function_mv1073">
+            <en>Hop semitrailer</en>
+            <de>Hopfenauflieger</de>
+            <cz>Návěs pro přepravu Chmele</cz>
+        </text>
+        <text name="RED">
+            <en>Red</en>
+            <de>Rot</de>
+            <cz>Červená</cz>
+        </text>
+        <text name="GREEN">
+            <en>Green</en>
+            <de>Grün</de>
+            <cz>Zelená</cz>
+        </text>
+        <text name="ORANGE">
+            <en>Orange</en>
+            <de>Orange</de>
+            <cz>Oranžová</cz>
+        </text>
+        <text name="DARK">
+            <en>Dark</en>
+            <de>Dunkel</de>
+            <cz>Černá</cz>
+        </text>
+        <text name="GREY">
+            <en>Grey</en>
+            <de>Dunkel</de>
+            <cz>Šedá</cz>
+        </text>
+        <text name="WHITE">
+            <en>White</en>
+            <de>Weiss</de>
+            <cz>Bílá</cz>
+        </text>
+        <text name="configuration_frontAttacher">
+            <en>Front attacher</en>
+            <de>Frontanbau</de>
+            <cz>Přední TUZ</cz>
+        </text>
+        <text name="configuration_strhavaAttacher">
+            <en>Cutter connection</en>
+            <de>Cutter Anschluss</de>
+            <cz>Zapojení Strhávače</cz>
+        </text>
+        <text name="configuration_panel">
+            <en>Control configuration</en>
+            <de>Steuerungskonfiguration</de>
+            <cz>Konfigurace ovládání</cz>
+        </text>
+    </l10n>
+    <!--Non converted elements, might require manual conversion or are obsolete:
+
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc>
+    <jointTypes>
+        <jointType name="strhtrailer"/>
+    </jointTypes>
+
+    <jointTypes>
+        <jointType name="strhtrailer"/>
+    </jointTypes>
+</modDesc>
+-->
+</modDesc>
